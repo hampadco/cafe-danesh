@@ -1,0 +1,64 @@
+ <div class="page-content-wrapper card">
+      <div class="container card">
+        <div class="pt-3">
+
+            @* khadamattttttttttttttttttttttttttttttttttttttttttttttttttttttt *@
+
+            <div id="khadamat" >
+
+                                                                <p class="form-control text-center" style="background-color: whitesmoke;">انتخاب  زیر دسته </p>
+                                                                @if (@ViewBag.slist != null)
+                                                                {
+                                                                  int c;
+
+                                                                  @foreach (var item in @ViewBag.slist)
+                                                                  {
+                                                                    c=0;
+                                                                      @foreach (var item1 in menu.cat)
+                                                                      {
+                                                                        if (item.Id==item1.FatherIdCat)
+                                                                        {
+                                                                           c++;
+                                                                        }
+                                                                       
+                                                                      }
+                                                                        @if (c != 0)
+                                                                        {
+                                                                          
+                                                                              <a class="form-control "  style="margin-top: 10px;"  href="/home/selectcat/@item.Id">
+                                                                              <i class="w-icon-category"></i>
+                                                                              @item.NameCat                                   	
+                                                                              
+                                                                              </a>
+                                                                            
+                                                                          
+                                                                        }else
+                                                                        {
+                                                                          
+                                                                            <a class="form-control "  style="margin-top: 10px;"  href="/home/category/@item.Id">
+                                                                            <i class="w-icon-category"></i>
+                                                                            @item.NameCat                                   	
+                                                                            
+                                                                            </a>
+                                                                        
+                                                                        
+                                                                      }
+                                                                  }
+                                                                    
+                                                                }
+                                                                else
+                                                                {
+                                                                  <p class="alert alert-danger mt-7">زیر مجموعه ای برای این دسته وجود ندارد </p>
+                                                                }
+
+                                           
+                                            
+                                       
+<a class="form-control text-center" onclick="history.back()" style="margin-top: 10px;background-color: whitesmoke;">بازگشت</a>
+            </div>
+
+
+              </div>
+     </div>
+
+  

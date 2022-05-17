@@ -1,0 +1,201 @@
+
+
+@model ViewModels.AdminViewModel.Users.Vm_User;
+
+
+
+
+   
+
+
+<div class="page-wrapper">
+  <!-- Start of Main -->
+  <main class="main " style="margin-top: 60px;">
+  
+    
+      <div class="page-content mt-10">
+        <div class="container row justify-content-center" style="padding-left: 0px !important;">
+         
+          <div class="login-popup col-12" style="background-color: white">
+            <div class="tab tab-nav-boxed tab-nav-center tab-nav-underline">
+              <ul class="nav nav-tabs text-uppercase" role="tablist">
+                <li class="nav-item">
+                  <a href="#sign-in" class="nav-link active" style="font-size: large;margin-bottom: 40px;">ورود
+                  </a>
+                </li>
+                <li class="nav-item" href="login/register">
+                  <a href="login/register" class="SetLink" style="font-size: large;padding: 30px; margin-top: 30px;">عضویت</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+
+             
+
+
+     
+
+                <div class="tab-pane active" id="sign-in">
+                 
+      <form action="login/checklogin" method="post">
+
+                            @if (ViewBag.er != null)
+                                {
+                                    <div class="message">
+                                        <p style="color:red;margin:10px">@ViewBag.er</p>
+                                    </div>
+                                }
+                  <div class="form-group">
+                    <input style="
+                          padding: 15px;
+                          border: 1px solid rgb(207, 206, 206);
+                          border-radius: 8px;
+                        " type="number" class="form-control" name="PhoneUs"  
+                      placeholder=" شماره موبایل خود را وارد  نمایید" required autocomplete="off" />
+
+                      
+                  </div>
+                  <div class="form-group mb-0">
+                    <input style="
+                          padding: 15px;
+                          border: 1px solid rgb(207, 206, 206);
+                          border-radius: 8px;
+                        " type="password" class="form-control mt-3" name="PasswordUS" 
+                      placeholder="گذرواژه امن خود را وارد نمایید" required required autocomplete="off" />
+                       
+                  </div>
+                  <div class="row">
+                    <div class="col-4 ">
+
+                      <img src="/Captcha/GetCaptchaImage" alt="" style="
+                            margin-top: 20px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 5px;
+                            height: 40px;
+
+                          ">
+                    </div>
+
+                    <div class="col-8 justify-content-center">
+                      <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control mt-3" name="repass" 
+                        placeholder="اعداد امنیتی را وارد نمایید" required required autocomplete="off" />
+                       
+                    </div>
+                  </div>
+
+                  <hr>
+                   <button type="submit" class="btn btn-primary mt-7 form-control"
+                    style="color:white;padding: 20px; border-radius: 8px; font-size: 25px;background-color: #FFCC01;">ورود
+                  </button>
+     </form>
+                  <!-- <div class="form-checkbox d-flex align-items-center justify-content-between">
+                                        <input type="checkbox" class="custom-checkbox" id="remember1" name="remember1" ="">
+                                        <label for="remember1">مرا به خاطر بسپار </label>
+                                        <a href="#">فراموشی رمز عبور؟ </a>
+                                    </div> -->
+                 
+
+                  
+               @* @if (TempData["msg"] != null)
+                {
+                  <p style="margin-top: 5px;background-color:#ff00007d;padding:10px;color:white;text-align: center;height: 40px;border-radius: 5px;">@TempData["msg"]</p>
+                } *@
+                    <div style="text-align: center;margin-top:40px">
+                      <a href="login/forget" style="
+                        text-align: center;
+                        color: rgb(24, 24, 243);
+                        margin-top: 30px;
+                      " >
+                    رمز عبور را فراموش کرده ام
+                  </a>
+                      
+                    </div>
+                  
+                </div>
+
+
+                @* <div class="tab-pane" id="sign-up">
+                  <form action="login/Register" method="post" >
+                  <div class="form-group">
+                    <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control"  
+                      placeholder="ایمیل  خود را وارد  نمایید"  />
+                  </div>
+                  <div class="form-group">
+                    <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control"  
+                      placeholder="موبایل خود را وارد  نمایید"  />
+                  </div>
+                  <div class="form-group mb-0">
+                    <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control" 
+                      placeholder="گذرواژه امن خود را وارد نمایید"  />
+                  </div>
+                   <div class="form-group mb-0 mt-5">
+                    <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control" 
+                      placeholder="تکرار گذرواژه امن خود را وارد نمایید "  />
+                  </div>
+                
+                  <div class="form-checkbox user-checkbox mt-5">
+                    <input type="radio" class="form-check-input p-3 " name="check-customer" />
+                    <label for="check-customer" class="check-customer mb-1">کاربر سایت خواهم بود</label>
+                    <br />
+
+                    <input type="radio" class="form-check-input mt-3 p-3" name="check-customer"  />
+                    <label for="check-seller" class="form-check-input check-seller">غرفه ساز یا تامین کننده هستم</label>
+                  </div>
+
+                  <div class="form-checkbox d-flex align-items-center justify-content-between mb-5">
+                    <input type="checkbox" class="custom-checkbox" id="remember" name="remember" ="" />
+                    <label for="remember" class="font-size-md">من موافقم با
+                      <a href="#" class="text-primary font-size-md">سیاست حفظ حریم خصوصی
+                      </a></label>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-7 form-control"
+                    style="padding: 18px; border-radius: 8px; font-size: 25px;background-color: #FFCC01;color:white">عضو شوید
+                  </button>
+                  </form>
+                </div> *@
+                
+
+
+
+
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    
+  </main>
+  <!-- End of Main -->
+</div>
+
+
+
+
+ <!-- End of Page Wrapper -->
+
+    <!-- Plugin JS File -->
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/main.min.js"></script>

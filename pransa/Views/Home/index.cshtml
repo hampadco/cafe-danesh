@@ -1,0 +1,591 @@
+
+    <!-- PWA Install Alert -->
+    @* <div class="toast pwa-install-alert shadow bg-white" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000" data-bs-autohide="true">
+      <div class="toast-body">
+        <div class="content d-flex align-items-center mb-2"><img src="img/icons/icon-72x72.png" alt="">
+          <h6 class="mb-0"> افزودن به صفحه اصلی </h6>
+          <button class="btn-close ms-auto" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div><span class="mb-0 d-block">سوها را بر روی صفحه اصلی تلفن همراه خود اضافه کنید. <strong class="mx-1"> افزودن به صفحه اصلی  </strong>دکمه &amp;  لذت بردن از آن را مانند یک برنامه منظم.</span>
+      </div>
+    </div> *@
+    <div class="page-content-wrapper">
+      <div class="container">
+        <div class="pt-3">
+          <!-- Hero Slides-->
+          <div class="hero-slides owl-carousel">
+            <!-- Single Hero Slide-->
+
+            @if(ViewBag.slider != null)
+                            {
+                                @foreach (var item in ViewBag.slider)
+                                {
+                                  <div class="single-hero-slide" style="background-image: url('/fileupload/@item.ImageMainSlid')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+                                }
+                            }
+           
+          </div>
+        </div>
+      </div>
+      <!-- Product Catagories -->
+      <div class="product-catagories-wrapper py-3">
+        <div class="container">
+          <h1 class="text-center alert alert-light form-control">
+               دسته بندی ها
+            </h1>
+          <div class="product-catagory-wrap">
+            <div class="row g-2">
+
+              @if( menu.cat != null)
+              {
+                @foreach (var item in menu.cat)
+                {
+                  @if (item.FatherIdCat==0)
+                  {
+                    <div class="col-6">
+                      <div class="card catagory-card">
+                        <div class="card-body"><a class="text-danger" href="/home/selectcat/@item.Id" >
+                            <span>@item.NameCat</span></a></div>
+                      </div>
+                    </div>
+                  }
+                }
+
+              }
+             
+              
+
+             
+          
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- فروش ویژه Slide -->
+      <div class="flash-sale-wrapper">
+        <div class="container">
+         
+            <h1 class="text-center alert alert-light form-control">
+                محصولات تخفیفی
+            </h1>
+           
+          
+          <!-- فروش ویژه Slide-->
+          <div class="flash-sale-slide owl-carousel">
+            <!-- Single Flash Sale Card-->
+
+
+                    @if (ViewBag.t != null)
+                {
+                    @foreach (var item in ViewBag.t)
+                    {
+                      <div class="card flash-sale-card">
+                        <div class="card-body"><a href="home/detailsshop/@item.Id"><img style="max-height: 75px;min-height: 75px;" src="/fileupload/@item.ImageMainPro" alt=""><span class="product-title">@item.TitleProductPro</span>
+                            <p class="sale-price" id="@item.Id">@item.Price_Pro تومان </p>
+                               <script>
+                                     document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                           <a href="home/detailsshop/@item.Id" class="btn btn-primary" style="width: 100%;margin-top: 10px;">سبد خرید</a>
+                            </a>
+                            
+                            </div>
+                      </div>
+                    }
+                }
+
+                             
+          </div>
+        </div>
+      </div>
+      <!-- Top Products -->
+
+       <!-- فروش ویژه Slide -->
+      <div class="flash-sale-wrapper">
+        <div class="container">
+         
+            <h1 class="text-center alert alert-light form-control">
+                محصولات پرفروش
+            </h1>
+           
+          
+          <!-- فروش ویژه Slide-->
+          <div class="flash-sale-slide owl-carousel">
+            <!-- Single Flash Sale Card-->
+
+
+                    @if (ViewBag.p != null)
+                {
+                    @foreach (var item in ViewBag.p)
+                    {
+                      <div class="card flash-sale-card">
+                        <div class="card-body"><a href="home/detailsshop/@item.Id"><img style="max-height: 75px;min-height: 75px;" src="/fileupload/@item.ImageMainPro" alt=""><span class="product-title">@item.TitleProductPro</span>
+                            <p class="sale-price" id="@item.Id">@item.Price_Pro تومان </p>
+                               <script>
+                                     document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                           <a href="home/detailsshop/@item.Id" class="btn btn-primary" style="width: 100%;margin-top: 10px;">سبد خرید</a>
+                            </a>
+                            
+                            </div>
+                      </div>
+                    }
+                }
+
+                             
+          </div>
+        </div>
+      </div>
+      <!-- Top Products -->
+
+           <div class="top-products-area py-3">
+        <div class="container">
+          <h1 class="text-center alert alert-light form-control">
+آخرین مقالات            </h1>
+           <div class="collection-slide owl-carousel">
+         
+          @if (ViewBag.magale != null)
+                {
+                    @foreach (var item in ViewBag.magale)
+                    {
+                    <div class="card collection-card"><a href="/blog/details/@item.Id"><img src="/fileupload/@item.ImageMainBlo" alt=""></a>
+                      <div class="collection-title">
+                         
+                                                <a href="/blog/details/@item.Id">
+                                            <img src="/assets/images/icons/article.jpg" alt="لوگوی فروشنده"
+                                                style="width: 30px !important;" />
+                                            </a>
+                                         
+                        <span>@item.TitleBLo</span>
+                        </div>
+                    </div>
+                }
+               }
+        </div>
+        </div>
+      </div>
+      <!-- Cool Facts Area-->
+      <div class="cta-area">
+        <div class="container">
+          <div class="row">
+
+
+            <div class="collection-slide owl-carousel">
+         
+          @if (ViewBag.baner != null)
+                {
+                    @foreach (var item in ViewBag.baner)
+                    {
+                    <div class="card collection-card"><a href="/blog/details/@item.Id"><img src="/fileupload/@item.ImageMainSlid" alt=""></a>
+                     
+                    </div>
+                }
+               }
+        </div>
+
+
+
+<br>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+                             
+                                
+                            </div>
+        </div>
+      </div>
+     
+     
+
+ <!-- Top Products -->
+
+       <!-- فروش ویژه Slide -->
+      <div class="flash-sale-wrapper mt-7" style="margin-top: 20px;">
+        <div class="container">
+         
+            <h1 class="text-center alert alert-light form-control">
+                 جدیدترین محصولات 
+                            </h1>
+           
+          
+          <!-- فروش ویژه Slide-->
+          <div class="flash-sale-slide owl-carousel">
+            <!-- Single Flash Sale Card-->
+
+
+                    @if (ViewBag.g != null)
+                {
+                    @foreach (var item in ViewBag.g)
+                    {
+                      <div class="card flash-sale-card">
+                        <div class="card-body"><a href="home/detailsshop/@item.Id"><img style="max-height: 75px;min-height: 75px;" src="/fileupload/@item.ImageMainPro" alt=""><span class="product-title">@item.TitleProductPro</span>
+                            <p class="sale-price" id="@item.Id">@item.Price_Pro تومان </p>
+                               <script>
+                                     document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                           <a href="home/detailsshop/@item.Id" class="btn btn-primary" style="width: 100%;margin-top: 10px;">سبد خرید</a>
+                            </a>
+                            
+                            </div>
+                      </div>
+                    }
+                }
+
+                             
+          </div>
+        </div>
+      </div>
+      <!-- Top Products -->
+
+
+ <!-- Top Products -->
+
+       <!-- فروش ویژه Slide -->
+      <div class="flash-sale-wrapper">
+        <div class="container">
+         
+            <h1 class="text-center alert alert-light form-control">
+               پیشنهادات شگفت انگیز
+            </h1>
+           
+          
+          <!-- فروش ویژه Slide-->
+          <div class="flash-sale-slide owl-carousel">
+            <!-- Single Flash Sale Card-->
+
+
+                    @if (ViewBag.s != null)
+                {
+                    @foreach (var item in ViewBag.s)
+                    {
+                      <div class="card flash-sale-card">
+                        <div class="card-body"><a href="home/detailsshop/@item.Id"><img style="max-height: 75px;min-height: 75px;" src="/fileupload/@item.ImageMainPro" alt=""><span class="product-title">@item.TitleProductPro</span>
+                            <p class="sale-price" id="@item.Id">@item.Price_Pro تومان </p>
+                               <script>
+                                     document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                           <a href="home/detailsshop/@item.Id" class="btn btn-primary" style="width: 100%;margin-top: 10px;">سبد خرید</a>
+                            </a>
+                            
+                            </div>
+                      </div>
+                    }
+                }
+
+                             
+          </div>
+        </div>
+      </div>
+      <!-- Top Products -->
+
+       <!-- Top Products -->
+
+       <!-- فروش ویژه Slide -->
+      <div class="flash-sale-wrapper">
+        <div class="container">
+         
+            <h1 class="text-center alert alert-light form-control">
+              پیشنهادات لحظه ای
+            </h1>
+           
+          
+          <!-- فروش ویژه Slide-->
+          <div class="flash-sale-slide owl-carousel">
+            <!-- Single Flash Sale Card-->
+
+
+                    @if (ViewBag.l != null)
+                {
+                    @foreach (var item in ViewBag.l)
+                    {
+                      <div class="card flash-sale-card">
+                        <div class="card-body"><a href="home/detailsshop/@item.Id"><img style="max-height: 75px;min-height: 75px;" src="/fileupload/@item.ImageMainPro" alt=""><span class="product-title">@item.TitleProductPro</span>
+                            <p class="sale-price" id="@item.Id">@item.Price_Pro تومان </p>
+                               <script>
+                                     document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                           <a href="home/detailsshop/@item.Id" class="btn btn-primary" style="width: 100%;margin-top: 10px;">سبد خرید</a>
+                            </a>
+                            
+                            </div>
+                      </div>
+                    }
+                }
+
+                             
+          </div>
+        </div>
+      </div>
+      <!-- Top Products -->
+
+    <!-- Top Products -->
+
+       <!-- فروش ویژه Slide -->
+      <div class="flash-sale-wrapper">
+        <div class="container">
+         
+            <h1 class="text-center alert alert-light form-control">
+              پیشنهادات ما   
+            </h1>
+           
+          
+          <!-- فروش ویژه Slide-->
+          <div class="flash-sale-slide owl-carousel">
+            <!-- Single Flash Sale Card-->
+
+
+                    @if (ViewBag.m != null)
+                {
+                    @foreach (var item in ViewBag.m)
+                    {
+                      <div class="card flash-sale-card">
+                        <div class="card-body"><a href="home/detailsshop/@item.Id"><img style="max-height: 75px;min-height: 75px;" src="/fileupload/@item.ImageMainPro" alt=""><span class="product-title">@item.TitleProductPro</span>
+                            <p class="sale-price" id="@item.Id">@item.Price_Pro تومان </p>
+                               <script>
+                                     document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                           <a href="home/detailsshop/@item.Id" class="btn btn-primary" style="width: 100%;margin-top: 10px;">سبد خرید</a>
+                            </a>
+                            
+                            </div>
+                      </div>
+                    }
+                }
+
+                             
+          </div>
+        </div>
+      </div>
+      <!-- Top Products -->
+
+
+
+  <!-- فروش ویژه Slide -->
+      <div class="flash-sale-wrapper mt-7" style="margin-top: 20px;">
+        <div class="container">
+         
+            <h1 class="text-center alert alert-light form-control">
+                ویژگی های @menu.Title 
+                            </h1>
+
+                             <div class="container main-container">
+                <div class="footer-services">
+                    <div class="row">
+                        <div class="service-item col-6  justify-content-center text-center">
+                            <a href="#" target="_blank">
+                                <img src="~/assets/svg/delivery.svg" style="width: 75px;">
+                            </a>
+                            <p>تحویل اکسپرس</p>
+                        </div>
+                        <div class="service-item col-6  justify-content-center text-center">
+                            <a href="#" target="_blank">
+                                <img src="~/assets/svg/contact-us.svg" style="width: 75px;">
+                            </a>
+                            <p>پشتیبانی 24 ساعته</p>
+                        </div>
+                        <div class="service-item col-6  justify-content-center text-center">
+                            <a href="#" target="_blank">
+                                <img src="~/assets/svg/payment-terms.svg" style="width: 75px;">
+                            </a>
+                            <p>پرداخت درمحل</p>
+                        </div>
+                        <div class="service-item col-6  justify-content-center text-center">
+                            <a href="#" target="_blank">
+                                <img src="~/assets/svg/return-policy.svg" style="width: 75px;">
+                            </a>
+                            <p>۷ روز ضمانت بازگشت</p>
+                        </div>
+                        <div class="service-item col-12 justify-content-center text-center">
+                            <a href="#" target="_blank">
+                                <img src="~/assets/svg/origin-guarantee.svg" style="width: 75px;">
+                            </a>
+                            <p>ضمانت اصل بودن کالا</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-widgets">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <div class="widget-menu widget card">
+                               
+                                <h1 class="text-center alert alert-light form-control">
+                                  راهنمای خرید از @menu.Title
+                            </h1>
+                                <ul class="text-center justify-content-center" style="padding-left: 20px;padding-bottom: 20px;">
+                                    <li class="btn btn-info col-12 form-control text-right">
+                                        <a href="/blog/index/2">نحوه ثبت سفارش</a>
+                                    </li>
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="/blog/index/3">رویه ارسال سفارش</a>
+                                    </li>
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="/blog/index/4">شیوه&zwnj;های پرداخت</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            @* اینماد *@
+                        <div class="col-12">
+                         <h1 class="text-center alert alert-light form-control">
+                                  مجوزها @menu.Title
+                            </h1>
+                        <div class="d-flex flex-column text-center card">
+                        <a href="https://enamad.ir/">@Html.Raw(@menu.enemad)
+                        <img src="/assets/svg/logo-enemad.png" alt="">
+                        </a>
+                        </div>
+                    </div>
+                        </div>
+                        
+                        <div class="col-12 ">
+                            <div class="widget-menu widget card">
+                               
+                                <h1 class="text-center alert alert-light form-control">
+                                 خدمات مشتریان @menu.Title
+                            </h1>
+                                <ul class="footer-menu" style="padding-left: 20px;padding-bottom: 20px;">
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="/blog/index/5">پاسخ به پرسش&zwnj;های متداول</a>
+                                    </li>
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="/blog/index/6">رویه&zwnj;های بازگرداندن کالا</a>
+                                    </li>
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="/blog/index/7">شرایط استفاده</a>
+                                    </li>
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="/home/privacyrul">حریم خصوصی</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-12 ">
+                            <div class="widget-menu widget card">
+                              
+
+                                 <h1 class="text-center alert alert-light form-control">
+                                 ارتباط با @menu.Title
+                            </h1>
+
+                               @if (ViewBag.address != null)
+                                {
+                                  @foreach (var item in ViewBag.address)
+                                    {
+                                <ul class="footer-menu" style="padding-left: 20px;padding-bottom: 20px;">
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="#">   آدرس: @item.FirstAddress</a>
+                                     
+                                    </li>
+                                    @if (@item.SecondAddress != null)
+                                    {
+                                        <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="#">   آدرس دوم: @item.SecondAddress</a>
+                                     
+                                    </li>
+                                     }
+                                  
+
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="#">شماره تماس:@item.Tel1Ad</a>
+                                    </li>
+
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="#">شماره تلفن ثابت:@item.Officetel1Ad</a>
+                                    </li>
+                                      @if (@item.Officetel2Ad != null)
+                                    {
+                                        <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="#">   آدرس دوم: @item.Officetel2Ad</a>
+                                     
+                                    </li>
+                                     }
+                                   
+
+                                    <li class="mt-3 btn btn-info col-12 form-control">
+                                        <a href="#">ایمیل:@item.Tel2Ad</a>
+                                    </li>
+
+                                   @* <li>
+                                        <a href="#">درباره @menu.Title</a>
+                                    </li> *@
+
+                                </ul>
+                                    }
+                                       }
+
+                            </div>
+                        </div>
+                                
+
+                       
+                    </div>
+                </div>
+               
+            </div>
+            <div class="description">
+                <div class="container main-container">
+                    <div class="row mt-3">
+                        <div class="site-description col-12 card " style="text-align: justify;">
+                           
+                            <p style="padding: 15px;">
+                                @menu.Title به عنوان یکی از قدیمی&zwnj;ترین فروشگاه های اینترنتی با بیش از یک دهه تجربه، با
+                                پایبندی به سه اصل کلیدی، پرداخت در
+                                محل، 7 روز ضمانت بازگشت کالا و تضمین اصل&zwnj;بودن کالا، موفق شده تا همگام با فروشگاه&zwnj;های
+                                معتبر جهان، به بزرگ&zwnj;ترین فروشگاه
+                                اینترنتی ایران تبدیل شود. به محض ورود به @menu.Title با یک سایت پر از کالا رو به رو
+                                می&zwnj;شوید! هر آنچه که نیاز دارید و به
+                                ذهن شما خطور می&zwnj;کند در اینجا پیدا خواهید کرد.
+                            </p>
+                        </div>
+                        @* <div class="symbol col-12 col-lg-5">
+                            <a href="#" target="_blank"><img src="assets/img/symbol-01.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="assets/img/symbol-02.png" alt=""></a>
+                        </div> *@
+                    </div>
+                </div>
+            </div>
+           
+          
+           
+          
+          
+        </div>
+      </div>
+      <!-- Top Products -->
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+      

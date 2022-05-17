@@ -1,0 +1,285 @@
+@model ViewModels.AdminViewModel.Product.Vm_Product
+<style>
+    div.ql-tooltip 
+    {
+               display: none;
+    }
+    div.ql-editor{
+        text-align: justify !important;
+    }
+</style>
+
+
+
+<div class="container card">
+    <hr>
+    <div class="product product-single row ">
+
+        <div class="col-12 mt-3" style="margin-top: 60px;!important">
+
+        <p class="mt-7 form-control" style="    margin-top: 30px;">@Model.TitleProductPro</p>
+
+
+                     <div class="hero-slides owl-carousel">
+
+                         <div class="single-hero-slide" style="background-image: url('/fileupload/@Model.ImageMainPro')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+           
+                
+
+                      </div>
+
+
+  <div>
+
+                          @if (@Model.Language == "off")
+                                            {
+
+                                                 <div class="col-12 mt-3 ">
+                                                      <a style="border-radius: 5px;color:white !important" href="https://api.whatsapp.com/send?phone=@menu.Whts&amp;text=سلام ، قیمت الان @menu.SocialNetwork.Whatsapp رو میخواستم &amp;source=&amp;data=" class="btn btn-success btn-with-icon col-12 mt-3">
+                                                                                                    <img style="border-radius: 15px;"  src="~/assets/img/theme/shopping-cart.png" alt="">
+                                                            دریافت قیمت لحظه ای 
+                                                             </a>
+                                                    </div>                                          
+
+                                            }
+                                            else
+                                            {
+                                                 <div class="col-12 mt-3">
+                                                <a href="/details/addcart/@Model.Id" class="btn btn-success btn-with-icon  col-12 mt-3">
+                                                    <img style="border-radius: 15px;"  src="~/assets/img/theme/shopping-cart.png" alt="">
+                                                    افزودن به سبد خرید
+                                                </a>
+                                                 </div>
+
+                                            }
+
+                    </div>
+
+
+
+
+
+
+
+            <div class="product-details">
+                <img src="/assets/images/shop/shop.png" alt="" style="width: 50px;border-radius: 50px;margin-top: 10px;">
+                <hr>
+                
+                <div class="product-bm-wrapper">
+
+                    <p class="mt-7  text-center" style="    margin-top: 30px;">@Model.TitleProductPro</p>
+
+                    <div class="product-meta mt-3">
+                        <div class="product-categories">
+                         
+                            <span class="product-category"><span href="#">دسته بندی :فروشگاه آنلاین فایل  </span></span>
+                        </div>
+
+                    </div>
+                </div>
+                @* <div class="ratings-container">
+                    <div class="ratings-full">
+                        <span class="ratings" style="width: 80%;"></span>
+                        <span class="tooltiptext tooltip-top"></span>
+                    </div>
+                    <a href="#" class="rating-reviews">(1 نظر )</a>
+                </div> *@
+
+
+
+
+
+                <div class="row mt-3">
+
+                     @if (@Model.Language == "off")
+                        {
+                            <div class="col-12 mt-3">
+
+                               
+
+                                <p id="@Model.Id">محدوده قیمت از : @Model.Price_Pro</p>تومان 
+                                 <script>
+                                     document.getElementById("@Model.Id").innerText=document.getElementById("@Model.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                            </div>
+
+                            
+                            <div class="col-12 ">
+
+                            
+
+                                <p id="o">تا : @Model.TotalPro</p>تومان 
+                                 <script>
+                                     document.getElementById("o").innerText=document.getElementById("o").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                            </div>
+                       }
+                       else if (@Model.OfferPro != "0")
+                        {
+
+                            <div class="col-12 ">
+
+                                
+
+                                <del id="f">قیمت  : @Model.PricePro تومان </del>
+                                 <script>
+                                     document.getElementById("f").innerText=document.getElementById("f").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                            </div>
+
+                            
+                            <div class="col-12 ">
+
+                              
+
+                         قیمت  با تخفیف:   <p style="font-size: 18px;" class="price text-primary" id="g">  @Model.Price_Pro تومان</p> 
+                                 <script>
+                                     document.getElementById("g").innerText=document.getElementById("g").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                            </div>
+
+
+
+                        }
+
+
+                    <div class="col-12 ">
+                      
+
+                        <p> نوع فایل : @Model.BrandPro</p>
+                    </div>
+
+
+                    <div class="col-12 ">
+                        
+
+                        <p> تعداد صفحات : @Model.SizePro</p>
+                    </div>
+
+
+                      <div class="col-12 mt-3">
+                       
+
+                                       @{
+                                                        var color = ViewBag.color ;
+                                                        @if ( color != null )
+                                                        {
+                                                            <li style="text-decoration: none;">
+                                                                <span style="font-size: 18px;">مقطع : </span>
+                                                                @foreach ( var itemco in color )
+                                                                {
+                                                                    <input type="radio" name="color"> 
+                                                                    <span style="font-size: 18px;"> @itemco.ColorName </span>
+                                                                    @* <span> itemco.ColorName </span> *@
+                                                                }
+                                                            </li> 
+                                                        }
+                                                    }
+                     </div>
+
+                
+
+                    
+                                      
+
+                                            
+
+
+
+
+                </div>
+
+
+               <hr class="product-divider">
+
+                <div class="">
+                    <h5 class="new-price">@Html.Raw(@Model.DescreptionPro)</h5>
+                </div>
+
+                 
+
+
+
+
+                <hr class="product-divider">
+
+                <div class="">
+                    <h5 class="new-price">اطلاعات ارتباطی</h5>
+                </div>
+
+                @* <div class="row">
+
+                    <div class="col-6">
+
+                        <h5 class="new-price">شماره تلفن ثابت : </h5>
+
+                        <p>021-0000000</p>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="new-price">شماره تلفن همراه: </h5>
+
+                        <p>09120000000</p>
+                    </div>
+
+                </div> *@
+
+                <div class="row">
+
+                    <div class="col-6">
+
+                        <h5 class="new-price">آدرس : </h5>
+
+                        <p>تهران-میرداماد خیابان شاه نظری ....</p>
+                    </div>
+                    
+
+                </div>
+
+                <div class="product-short-desc lh-2"></div>
+
+                <div class="social-links-wrapper">
+                    <div class="social-links">
+                        <div class="social-icons social-no-color border-thin">
+                            @if (@menu.SocialNetwork.Telegram !="")
+                            {
+                                <a href="@menu.SocialNetwork.Telegram" class="social-icon social-telegram fab fa-telegram"></a>
+
+                            }
+
+                            @if (@menu.SocialNetwork.Whatsapp !="")
+                            {
+                                   <a href="@menu.SocialNetwork.Whatsapp" class="social-icon social-whatsapp fab fa-whatsapp"></a>
+
+                            }
+
+                             @if (@menu.SocialNetwork.Instagram !="")
+                            {
+                                  <a href="@menu.SocialNetwork.Instagram" class="social-icon social-instagram fab fa-instagram"></a>
+
+                            }
+
+                        </div>
+                    </div>
+                    <span class="divider d-xs-show"></span>
+                    <div class="product-link-wrapper d-flex">
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"><span></span></a>
+                        <!-- <a href="#" class="btn-product-icon btn-compare btn-icon-left w-icon-compare"><span></span></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+
+    </div>
+
+<br>
+<br>
+<br>
+</div>

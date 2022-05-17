@@ -1,0 +1,307 @@
+<!-- Start of Main -->
+@model List<ViewModels.AdminViewModel.Calender.MCalender>
+
+@* <main  class="container card">
+   
+
+   <h2 class="form-control text-center"  style="margin-top: 70px !important;">تقویم نمایشگاهی</h2>
+
+    <div class="page-content pt-2">
+        <div class="container" style="border:1px solid black;border-radius: 10px;">
+ 
+            <div class="row justify-content-center" id="cat">
+
+            <form action="home/calenderlist" method="post" class="row" >
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 mb-4">
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <p class="t">انتخاب شهر</p>
+                            <select class="form-control select2" asp-items="@ViewBag.City" name="shahr">
+                                <option value="همه">کل شهرها</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 mb-4 ">
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <p class="t">انتخاب محل نمایشگاه </p>
+                            <select class="form-control select2" asp-items="@ViewBag.nam" name="loc">
+                                <option value="همه">کل نمایشگاه ها</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 mb-4 ">
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <p class="t">انتخاب عنوان نمایشگاه </p>
+                            <select class="form-control select2" asp-items="@ViewBag.tnam" style="width: 100% !important;" name="title">
+                                <option value="همه">کل نمایشگاه ها</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 mb-4  " style="margin-top: 60px;">
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <button type="submit"
+                                style="font-size:20px;background-color: gray; color:white;border-radius: 5px;padding: 7px;">اعمال
+                                فیلتر</button>
+
+
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+                 </form>
+           
+
+
+              <div class="col-12">
+
+            @foreach (var item in @Model)
+            {
+               
+                 <div class="form-control text-center">
+                     
+
+                     <div class="col-12">@item.Title</div>
+                     <div class="col-12">تاریخ تحویل : @item.DataReceive </div>
+                     <div class="col-12">تاریخ تخریب : @item.DateDestruction</div>
+                     
+                   
+                 </div>
+                 
+                <div class="panel" style="display: none;">
+                           <table>
+                            <tr>
+                              <th>عنوان نمایشگاه</th>
+                               <th>شهر برگزاری </th>
+                                <th>سال برگزاری </th>
+                                 <th> ماه برگزاری </th>
+                                   <th> تاریخ تحویل سالن جهت غرفه سازی </th>
+                                     <th> تاریخ تخریب غرفه </th>
+                                    <th>جزییات</th>
+                            </tr>
+                            <tr>
+                                <td>@item.Title</td>
+                                <td>@item.City</td>
+                                <td>@item.Years</td>
+                                <td>@item.Month</td>
+                                <td>@item.DataReceive</td>
+                                <td>@item.DateDestruction</td>
+                                <td><a href="/home/calender/@item.Id" style="color:blue !important">مشاهده جزییات</a></td>
+
+            
+
+                            </tr>
+                    </table>
+                </div>
+            }
+
+               
+
+
+           </div>
+
+
+
+            </div>
+            
+    </div>
+
+    <!-- End of PageContent -->
+</main>
+<!-- End of Main -->
+<script>
+
+    function show() {
+        document.getElementById('des').style.display = '';
+
+    }
+    function hide() {
+        document.getElementById('des').style.display = 'none';
+
+    }
+</script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script> *@
+ <div class="page-content-wrapper">
+      <div class="container">
+        <!-- Section Heading-->
+        <div class="section-heading d-flex align-items-center pt-3 justify-content-between">
+          <h6 class="form-control text-center" style="background-color: lightblue;">تقویم نمایشگاهی</h6>
+         
+        </div>
+
+      
+
+      <div id="filter" style="display: none;">
+
+          <form action="home/calenderlist" method="post" class="row" >
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 mb-4">
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <p class="t">انتخاب شهر</p>
+                            <select class="form-control select2" asp-items="@ViewBag.City" name="shahr">
+                                <option value="همه">کل شهرها</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 mb-4 ">
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <p class="t">انتخاب محل نمایشگاه </p>
+                            <select class="form-control select2" asp-items="@ViewBag.nam" name="loc">
+                                <option value="همه">کل نمایشگاه ها</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 mb-4 ">
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <p class="t">انتخاب عنوان نمایشگاه </p>
+                            <select class="form-control select2" asp-items="@ViewBag.tnam" style="width: 100% !important;" name="title">
+                                <option value="همه">کل نمایشگاه ها</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 mb-4  " style="margin-top: 60px;">
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <button type="submit"
+                                style="font-size:20px;background-color: gray; color:white;border-radius: 5px;padding: 7px;">اعمال
+                                فیلتر</button>
+
+
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+                 </form>
+      </div>
+
+
+
+
+
+
+
+         
+        <!-- Notifications Area-->
+
+        @foreach (var item in @Model)
+            {
+        <div class="notification-area pb-2">
+          <div class="list-group">
+            <!-- Single Notification--><a class="list-group-item d-flex align-items-center" href="home/calender/@item.Id"><span class="noti-icon"><i class="lni lni-calendar"></i></span>
+              <div class="noti-info">
+                <h6 class="mb-0" style="white-space: normal;line-height: 35px;text-align: center;">@item.Title</h6><span style="margin-top: 7px;" class="card" >تحویل :@item.DataReceive &nbsp;  تخریب:@item.DateDestruction</span>
+              </div></a>
+           
+          </div>
+        </div>
+            }
+      </div>
+
+      <a onclick="show()" class="form-control text-center" style="background-color: whitesmoke; bottom: 60px;z-index: 100;position: fixed;">اعمال فیلتر</a>
+    </div>
+
+    <script>
+        function show()
+        {
+            document.getElementById("filter").style.display="block"
+        }
+    </script>

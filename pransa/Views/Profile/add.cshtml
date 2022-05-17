@@ -1,0 +1,378 @@
+<!-- Start of Main -->
+@model ViewModel.AdminViewModel.Page.MPages
+<style>
+    p.t {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 5px;
+
+    }
+
+    
+
+    
+
+    div.col-md-3 {
+        @*border:1pxsolidgray;*@padding: 10px;
+        margin: 0px;
+        margin-bottom: 15px
+    }
+
+    p.text-uppercase {
+        font-size: large;
+    }
+</style>
+<main class="main">
+    <!-- Start of Page Header -->
+    
+            <h2 class="form-control  text-center mt-5" style="background-color: lightblue;">
+
+              
+                اضافه کردن صفحه
+            </h2>
+        
+    <!-- End of Page Header -->
+
+    <!-- Start of Breadcrumb -->
+
+    <!-- End of Breadcrumb -->
+
+    <!-- Start of PageContent -->
+    <div class="page-content pt-2">
+        <div class="container card" style="border-radius: 10px;">
+            @*Titleeeeeeeeeeeeeeeeeeeeeeeeeeeeee*@
+            <form action="/profile/add" method="post" enctype="multipart/form-data">
+
+
+                <div class="row justify-content-center " id="cat">
+                    @if (TempData["msg"] != null)
+
+                    {
+                        <p style="color:green;padding: 20px;font-size: 20px;"> @TempData["msg"] </p>
+
+                     }
+
+                    <div class="col-12 ">
+
+
+                        <div class="container justify-content-center">
+                            <div class="row">
+                                <p class="t">عنوان صفحه ایجادی</p>
+                                <input asp-for="Title" type="text" class="form-control t" required>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+           
+            @*adddddddddddddddddddddddddddddddddddddd *@
+
+            <div class="row justify-content-center" id="cat">
+
+
+                <div class="col-12">
+
+
+                    <div class="container">
+                        <div class="row">
+                           
+                                <p class="t">انتخاب دسته اصلی</p>
+                                <select class="form-control select2" asp-for="MainCat" asp-items="@ViewBag.catmain">
+                                    
+                                </select>
+                            
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+
+
+                <div class="col-12 ml-3">
+
+
+                    <div class="container">
+                        <div class="row">
+                           
+                                <p class="t">انتخاب دسته فرعی </p>
+                                <select class="form-control select2" asp-for="SubCat" asp-items=" ViewBag.catsub">
+                                  
+                                </select>
+                           
+                        </div>
+                    </div>
+                    <script>
+                        $('.select2').select2();
+                    </script>
+
+                </div>
+
+
+
+
+            </div>
+
+
+            @* iamgeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee *@
+            
+
+                <div class="row justify-content-center mt-3 mb-3">
+
+
+
+                    <div class="row mt-7">
+                        <div class="drop-zone col-6 mt-3 ">
+                            <span class="drop-zone__prompt"><img src="/assets/images/up.png" width="75px" alt=""
+                                    srcset=""></span>
+                            <input type="file" asp-for="MainImagef" class="drop-zone__input">
+                        </div>
+
+                        <div class="drop-zone col-6 mt-3 ">
+                            <span class="drop-zone__prompt"><img src="/assets/images/up2.png" width="75px" alt=""
+                                    srcset=""></span>
+                            <input type="file" asp-for="Image1f" class="drop-zone__input">
+                        </div>
+                        <div class="drop-zone col-6 mt-3 ">
+                            <span class="drop-zone__prompt"><img src="/assets/images/up2.png" width="75px" alt=""
+                                    srcset=""></span>
+                            <input type="file" asp-for="Image2f" class="drop-zone__input">
+                        </div>
+                        <div class="drop-zone col-6 mt-3 ">
+                            <span class="drop-zone__prompt"><img src="/assets/images/up2.png" width="100" alt=""
+                                    srcset=""></span>
+                            <input type="file" asp-for="Image3f" class="drop-zone__input">
+                        </div>
+                        
+
+                    </div>
+
+
+                </div>
+           
+            @*Otherrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*@
+           
+
+                <div class="row mt-7">
+
+
+                    <div class="col-lg-5 col-md-5 ">
+
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t">قبول پروژه در شهر های</p>
+                                <input asp-for="Citys" type="text" data-role="tagsinput"
+                                    value="تهران,تبریز,شیراز">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-3  ml-3 mt-10">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t ">آیا محصول خاصی ارئه می کنید؟</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-3  ml-3 mt-10">
+
+
+                        <div class="container">
+                            <div class="row">
+
+
+                                <div class="col-6 row ">
+                                    <div class="col-6" style="text-align: left;">
+                                        <input onclick="show()" type="radio" name="test" id=""
+                                            style="font-size: 15px;width: 25px;height: 25px;">
+
+                                    </div>
+                                    <div class="col-6">
+                                        <span>بلی</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-6 row ">
+                                    <div class="col-6" style="text-align: left;">
+                                        <input onclick="hide()" checked type="radio" name="test" id=""
+                                            style="font-size: 15px;width: 25px;height: 25px;">
+
+                                    </div>
+                                    <div class="col-6">
+                                        <span>خیر</span>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                @*prouductttttttttttttttttttttttttttttttttttttttttttttttttttt*@
+
+                <div class="row mt-7 " id="des" style="display: none;">
+
+
+                    <div class="col-lg-4 col-md-4 ">
+
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t">نحوه ارسال محصول</p>
+                                <input asp-for="TypeSend" type="text" class="form-control t">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 ">
+
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t">نحوه تصفیه حساب(نقد یا چک و شرایط)</p>
+                                <input asp-for="TypePay" type="text" class="form-control t">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 ">
+
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t">محل تسویه حساب</p>
+                                <input asp-for="LocationPay" type="text" class="form-control t">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+                @*descreptionnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn *@
+
+
+                <div class="row mt-7">
+
+
+
+
+
+                    <div class="col-12 ">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> توضیحات شامل سابقه و تخصص</p>
+                                <textarea asp-for="description" cols="30" rows="10"
+                                    style="font-family: 17px;padding: 20px" required></textarea>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                @* buttonnnnnnnnnnnnnnnnnnn *@
+
+                <div class="row justify-content-center mt-5">
+
+                    <button class="btn btn-success col-3" style="font-size: 18px;" type="submit">ذخیره</button>
+                    <button class="btn btn-danger col-3 ml-3 border-2" type="reset">انصراف</button>
+
+                </div>
+            </form>
+            <br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- End of PageContent -->
+</main>
+<!-- End of Main -->
+<script>
+
+    function show() {
+        document.getElementById('des').style.display = '';
+
+    }
+    function hide() {
+        document.getElementById('des').style.display = 'none';
+
+    }
+
+
+
+
+
+
+</script>

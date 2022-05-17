@@ -1,0 +1,161 @@
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+ <style>
+    td.p{
+       margin-top: 25px;
+       font-size: large;
+    }
+    tr{
+        border: 1px solid gray;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    span{
+        font-size: large;
+    }
+ </style>
+<!-- Start main-content -->
+<main class="main-content dt-sl mb-3 card">
+    <div class="container main-container">
+        <div class="row">
+            
+            <div class="col-12" style="margin-top: 30px;">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                        aria-labelledby="nav-home-tab">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table-responsive checkout-content dt-sl container">
+                                   <table class="table table-cart text-center ">
+
+                                     
+
+
+                                    @if ( ViewBag.list != null)
+                                    {
+                                        foreach (var item in  ViewBag.list)
+                                        {
+
+
+
+                                            
+                                            
+                                               
+                                                    <tr class=" row">
+                                                        <td class="col-4 ">
+                                                            <a href="details/index/@item.Id">
+                                                                <img style="border-radius: 15px;"  src="/fileupload/@item.ImageMainPro" style="height: 20px; width:20px ;" alt="">
+                                                            </a>
+                                                        </td>
+                                                        <td class="col-8 p">
+                                                            <a href="details/index/@item.Id" style="white-space: normal !important; color: black;">
+                                                               
+                                                                    @item.TitleProductPro
+                                                                    
+                                                                 
+                                                            </a>
+                                                          
+                                                        </td>
+                                                        <td class="col-12 p">
+                                                            <div  class="row">
+                                                                <a style="color: black;border-color: black;" href="order/mincart/@item.Id"  onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="btn btn-outline-light col-4  " >-</a>
+                                                                <input  min="0" name="quantity"
+                                                                    value="@item.count" type="number" class="col-4 text-center" >
+
+                                                                <a style="color: black;border-color: black;" href="order/addcart/@item.Id" 
+                                                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                                    class="btn btn-outline-light col-4">+</a>
+                                                            </div>
+                                                        </td>
+                                                        
+                                                      <td class="col-12 p">
+                                                          <span id="@item.Id@item.Id"> @item.Price_Pro  </span> 
+                                                                <script>
+                                                                    document.getElementById("@item.Id@item.Id").innerText=document.getElementById("@item.Id@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                                                </script>
+                                                      </td>
+
+                                                        
+                                                    </tr>
+                                                
+                                            
+                                            <hr>
+                                        }
+                                    }
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-12 w-res-sidebar sticky-sidebar text-center">
+                                <div class="dt-sn dt-sn--box mb-2">
+                                    <ul class="checkout-summary-summary">
+                                        <li>
+                                            <span>مبلغ کل (@HttpContextAccessor.HttpContext.Session.GetString("count") کالا)</span><br><span id="sum2" style="margin-top: 5px;color:blue"> 
+                                                
+                                                @HttpContextAccessor.HttpContext.Session.GetString("sum") تومان</span>
+                                        </li>
+                                        <li>
+                                            <span>هزینه ارسال<span class="help-sn" data-toggle="tooltip"
+                                                    data-html="true" data-placement="bottom"
+                                                    title="<div class='help-container is-right'><div class='help-arrow'></div><p class='help-text'>هزینه ارسال مرسولات می‌تواند وابسته به شهر و آدرس گیرنده متفاوت باشد. در صورتی که هر یک از مرسولات حداقل ارزشی برابر با ۱۵۰هزار تومان داشته باشد، آن مرسوله بصورت رایگان ارسال می‌شود.<br>'حداقل ارزش هر مرسوله برای ارسال رایگان، می تواند متغیر باشد.'</p></div>">
+                                                    <span class="mdi mdi-information-outline"></span>
+                                            </span></span><span>وابسته به آدرس</span>
+                                        </li>
+                                       
+                                    </ul>
+                                    <div class="checkout-summary-devider">
+                                        <div></div>
+                                    </div>
+                                    <div class="checkout-summary-content">
+                                        <div class="checkout-summary-price-title">مبلغ قابل پرداخت:</div>
+                                        <div class="checkout-summary-price-value">
+                                            <span class="checkout-summary-price-value-amount" id="sum"> @HttpContextAccessor.HttpContext.Session.GetString("sum") </span>
+                                            تومان
+                                        </div>
+                                        
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <a href="profile/CheckPardakht" class="mb-2 d-block">
+                                                <button class="btn-primary-cm btn-with-icon w-100 text-center pr-0">
+                                                    <i class="mdi mdi-arrow-left"></i>
+                                                    ادامه ثبت سفارش
+                                                </button>
+                                            </a>
+                                        }else
+                                        {
+                                            <a href="login/login" class="mb-2 d-block">
+                                                <button class="btn-primary-cm btn-with-icon w-100 text-center pr-0">
+                                                    <i class="mdi mdi-arrow-left"></i>
+                                                    ادامه ثبت سفارش
+                                                </button>
+                                            </a>
+                                        }
+
+                                        <div>
+                                            <span style="white-space: normal !important;">
+                                                کالاهای موجود در سبد شما ثبت و رزرو نشده‌اند، برای ثبت سفارش
+                                                مراحل بعدی را تکمیل کنید.
+                                            </span><span class="help-sn" data-toggle="tooltip" data-html="true" data-placement="bottom" title="
+                                                <div class='help-container is-right'>
+                                                    <div class='help-arrow'></div>
+                                                    <p class='help-text'>صفحه ها  موجود در سبد خرید شما تنها در صورت ثبت و پرداخت سفارش برای شما رزرو می‌شوند. در صورت عدم ثبت سفارش، @menu.Title هیچگونه مسئولیتی در قبال تغییر قیمت یا موجودی این کالاها ندارد.</p>
+                                                </div>">
+                                                <span class="mdi mdi-information-outline"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>   
+</main>
+<!-- End main-content -->
+<script>
+    document.getElementById("sum").innerText=document.getElementById("sum").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    document.getElementById("sum2").innerText=document.getElementById("sum2").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+</script>

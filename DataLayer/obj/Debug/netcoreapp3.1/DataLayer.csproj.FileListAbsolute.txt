@@ -1,0 +1,169 @@
+e:\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+e:\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+e:\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+e:\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+e:\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+e:\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+e:\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+e:\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+e:\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+e:\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+<<<<<<< HEAD
+=======
+f:\Projects\Pransa\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+f:\Projects\Pransa\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+f:\Projects\Pransa\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+f:\Projects\Pransa\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+f:\Projects\Pransa\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+f:\Projects\Pransa\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+f:\Projects\Pransa\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+f:\Projects\Pransa\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+f:\Projects\Pransa\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+f:\Projects\Pransa\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+f:\Projects\Pransa\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+f:\Projects\Pransa\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+>>>>>>> c52df2485c83b0a514cf539a0e62d00fd5b32e0c
+>>>>>>> 69458cf2ecf159d053776c6f10df13ccae0286ad
+d:\pransa-1\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+d:\pransa-1\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+d:\pransa-1\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+d:\pransa-1\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\pransa-1\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\pransa-1\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+d:\pransa-1\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+d:\pransa-1\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+d:\pransa-1\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+d:\pransa-1\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+d:\pransa-1\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+d:\pransa-1\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+>>>>>>> f8f79d4b4c05eca09bf2dde7f42c0cf93e042385
+f:\Projects\Shop\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+f:\Projects\Shop\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+f:\Projects\Shop\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+f:\Projects\Shop\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+f:\Projects\Shop\pransa\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+f:\Projects\Shop\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+f:\Projects\Shop\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+f:\Projects\Shop\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+f:\Projects\Shop\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+f:\Projects\Shop\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+f:\Projects\Shop\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+f:\Projects\Shop\pransa\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csprojAssemblyReference.cache
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\YAGOUT\Desktop\pransa-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\pransa-master-master\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\apple\Desktop\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\apple\Desktop\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\apple\Desktop\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\apple\Desktop\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\apple\Desktop\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\exhi\seoulweb\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\HP\exhi\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\HP\exhi\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\HP\exhi\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\HP\exhi\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\HP\exhi\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\HP\exhi\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+C:\Users\HP\exhi\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\exhi\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\HP\exhi\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\HP\exhi\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\exhi\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\HP\exhi\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\HP\exhi\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\apple\Desktop\SHOP\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\apple\Desktop\SHOP\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\apple\Desktop\SHOP\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\apple\Desktop\SHOP\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\SHOP\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\SHOP\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\SHOP\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\SHOP\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\SHOP\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\apple\Desktop\SHOP\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\SHOP\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\SHOP\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\SHOP\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.json
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.runtimeconfig.dev.json
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\cafe-danesh\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.genruntimeconfig.cache

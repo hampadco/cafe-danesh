@@ -1,0 +1,169 @@
+e:\pransa\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+e:\pransa\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+e:\pransa\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+e:\pransa\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+e:\pransa\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+e:\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+e:\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+e:\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+e:\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+e:\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+e:\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+e:\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+<<<<<<< HEAD
+=======
+f:\Projects\Pransa\pransa\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+f:\Projects\Pransa\pransa\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+f:\Projects\Pransa\pransa\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+f:\Projects\Pransa\pransa\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+f:\Projects\Pransa\pransa\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+f:\Projects\Pransa\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+f:\Projects\Pransa\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+f:\Projects\Pransa\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+f:\Projects\Pransa\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+f:\Projects\Pransa\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+f:\Projects\Pransa\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+f:\Projects\Pransa\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+>>>>>>> c52df2485c83b0a514cf539a0e62d00fd5b32e0c
+>>>>>>> 69458cf2ecf159d053776c6f10df13ccae0286ad
+d:\pransa-1\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+d:\pransa-1\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+d:\pransa-1\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+d:\pransa-1\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+d:\pransa-1\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+d:\pransa-1\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+d:\pransa-1\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+d:\pransa-1\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+d:\pransa-1\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+d:\pransa-1\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+d:\pransa-1\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+d:\pransa-1\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+>>>>>>> f8f79d4b4c05eca09bf2dde7f42c0cf93e042385
+f:\Projects\Shop\pransa\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+f:\Projects\Shop\pransa\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+f:\Projects\Shop\pransa\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+f:\Projects\Shop\pransa\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+f:\Projects\Shop\pransa\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+f:\Projects\Shop\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+f:\Projects\Shop\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+f:\Projects\Shop\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+f:\Projects\Shop\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+f:\Projects\Shop\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+f:\Projects\Shop\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+f:\Projects\Shop\pransa\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\YAGOUT\Desktop\pransa-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.AssemblyReference.cache
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\Tohid Goudarzi\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.AssemblyReference.cache
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\Tohid Goudarzi\Desktop\Archive\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\pransa-master-master\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\apple\Desktop\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\apple\Desktop\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\apple\Desktop\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\exhi\seoulweb\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\HP\exhi\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\HP\exhi\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\HP\exhi\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\HP\exhi\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\HP\exhi\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\HP\exhi\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.AssemblyReference.cache
+C:\Users\HP\exhi\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\exhi\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\HP\exhi\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\HP\exhi\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\HP\exhi\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\HP\exhi\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\HP\exhi\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\SHOP\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\apple\Desktop\SHOP\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\SHOP\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\SHOP\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\SHOP\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\SHOP\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\SHOP\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\SHOP\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\SHOP\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\apple\Desktop\SHOP\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\SHOP\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\apple\Desktop\SHOP\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\SHOP\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.AssemblyReference.cache
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\apple\Desktop\cafe-danesh\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb

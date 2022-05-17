@@ -1,0 +1,196 @@
+@model ViewModels.AdminViewModel.Calender.MCalender
+
+<style>
+     @* div.p{
+        border:1px solid #ebebeb;
+        padding: 10px;
+        border-radius: 5px;
+    } *@
+</style>
+   
+   
+</style>
+
+<div class="mt-3 card">
+
+
+    <div class="container">
+
+        <div class="row justify-content-center" style="border:1px solid black;border-radius: 7px; padding: 5px;">
+
+
+
+            
+                <h2 class="form-control text-center card p" style="margin-top: 40px; white-space: normal;background-color:lightblue;">
+
+                   
+                    @Model.Title
+                </h2>
+                <hr>
+           
+
+   <div class="row m " style="padding-bottom: 70px;">
+         <div class="col-12 card ">
+                <img src="/fileupload/@Model.Baner" alt="" style="width: 100%;border-radius: 15px;" srcset="">
+            </div>
+
+            <div class="col-12 ">
+
+                <div class="row justify-content-start ">
+
+                    <div class="col-12  mt-3 text-center card p  " >
+                       
+                        <b class="text-dark">@Model.Title</b>
+                       
+
+
+                    </div>
+
+
+                     <div class="col-12 text-left mt-3 text-center card p">
+                        <b class="mamo">زمان:</b>
+                        <b class="text-dark">@Model.Month @Model.Years</b>
+                       
+
+
+                    </div>
+
+                    <div class="col-12 text-left mt-3  text-center card p">
+                        <b class="mamo">تاریخ تحویل سالن:</b>
+                        <b class="text-dark">@Model.DataReceive</b>
+                       
+
+
+                    </div>
+                    <div class="col-12 text-left mt-3  text-center card p">
+                        <b class="mamo">تاریخ و تخریب غرفه:</b>
+                        <b class="text-dark">@Model.DateDestruction</b>
+                       
+
+
+                    </div>
+
+                    
+                <div class="col-12 mt-3 text-center card p">
+                    <b class="mamo">سال برگزاری:</b>
+                    <b> @Model.Years</b>
+                </div>
+
+                <div class="col-12 mt-3 text-center card p">
+                    <b class="mamo">روز شروع:</b>
+                    <b>@Model.StartingDay  @Model.Month</b>
+
+                </div>
+
+                <div class="col-12 mt-3 text-center card p">
+                    <b class="mamo">روز پایان :</b>
+                    <b>@Model.EndDay  @Model.Month</b>
+                </div>
+
+
+                 <div class="col-12 mt-3 text-center card p ">
+                    <b class="mamo">شهر نمایشگاه:</b>
+                    <b>@Model.City</b>
+                </div>
+
+                 <div class="col-12 mt-3 text-center card p  ">
+                    <b class="mamo">محل نمایشگاه:</b>
+                    <b>@Model.Location</b>
+                </div>
+
+                 <div class="col-12 mt-3 text-center card p ">
+                    <b class="mamo">تاریخ تحویل سالن جهت غرفه سازی:</b>
+                    <b>@Model.DataReceive</b>
+                </div>
+
+
+                 <div class="col-12 mt-3 text-center card p ">
+                    <b class="mamo">تاریخ تخریب غرفه:</b>
+                    <b>@Model.DateDestruction</b>
+                </div>
+
+                 <div class="col-12 mt-3 text-center card p ">
+                    <b class="mamo">زمان بازگشایی نمایشگاه:</b>
+                    <b>@Model.TimeReceive</b>
+                </div>
+
+
+                 <div class="col-12 mt-3  text-center card p">
+                    <b class="mamo">زمان بسته شدن نمایشگاه :</b>
+                    <b>@Model.TimeDestruction</b>
+                </div>
+
+
+                 <div class="col-12 mt-3 text-center card p ">
+                    <b class="mamo">مجری :</b>
+                    <b>@Model.executing</b>
+                </div>
+
+
+                 <div class="col-12 mt-3 text-center card p ">
+                    <b class="mamo">شماره تلفن ثابت اول :</b>
+                    <b>@Model.Tel1</b>
+                </div>
+
+
+                 <div class="col-12 mt-3 text-center card p ">
+                    <b class="mamo">شماره تماس دوم :</b>
+                    <b>@Model.Tel2</b>
+                </div>
+
+
+                 <div class="col-12 mt-3 text-center card p  ">
+                    <b class="mamo">ناظر نمایشگاه:</b>
+                    <b>@Model.Supervisor</b>
+                </div>
+
+                <div class="col-12 mt-3  text-center card p">
+                    <b class="mamo">تلفن ناظر:</b>
+                    <b>@Model.SupervisorTel</b>
+                </div>
+
+                 <div class="col-12 mt-3  text-center card p">
+                    <b class="mamo">وب سایت :</b>
+                    <b>@Model.WebSite</b>
+                </div>
+
+                   
+
+                  
+                    
+                    
+
+                   
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+   </div>
+          
+
+
+           
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>

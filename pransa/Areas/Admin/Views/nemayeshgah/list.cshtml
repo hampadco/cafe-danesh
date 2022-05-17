@@ -1,0 +1,70 @@
+@model List<ViewModels.AdminViewModel.Calender.MCalender>
+<!-- BEGIN: Content-->
+<section id="data-list-view" class="data-list-view-header">
+  <!-- DataTable starts -->
+  @if (ViewBag.er != null)
+  {
+  <p class="alert alert-success">@ViewBag.er</p>
+  }
+  <div class="table-responsive">
+    <table class="table data-list-view">
+      <thead>
+        <tr>
+         
+          <th>ردیف</th>
+          <th> عنوان    </th>
+          <th> شهر نمایشگاه  </th>
+          <th> محل نمایشگاه    </th>
+          <th> تاریخ تحویل</th>
+          <th>تاریخ نخریب</th>
+
+          <th> عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+        @if ( @Model != null)
+        {
+
+        int i=1;
+        @foreach (var item in @Model)
+        {
+
+        <tr>
+         
+          <td class="product-category"> @i</td>
+          <td class="product-name">@item.Title</td>
+          <td class="product-category">@item.City</td>
+
+          <td class="product-category">@item.Location </td>
+          <td class="product-category">@item.DataReceive</td>
+
+          <td class="product-category">@item.DateDestruction </td>
+           
+
+          <td class="product-action">
+            <div class="col-lg-3 col-md-3 mb-1">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="/admin/nemayeshgah/index/@item.Id" class="btn btn-primary btn-sm">مشاهده</a>
+                      <a onclick="return confirm('آیا از حذف اطلاعات مطمن هستید؟')" href="/admin/nemayeshgah/del/@item.Id"
+                            class="btn btn-danger btn-sm">حذف</a>
+                <a class="btn btn-success  btn-sm" href="/admin/nemayeshgah/update/@item.Id">ویرایش</a>
+              
+              </div>
+            </div>
+          </td>
+        </tr>
+        i++;
+        }
+
+        }
+
+      </tbody>
+    </table>
+  </div>
+  <!-- DataTable ends -->
+
+  <!-- add new sidebar starts -->
+
+  <!-- add new sidebar ends -->
+</section>
+<!-- Data list view end -->

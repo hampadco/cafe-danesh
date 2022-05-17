@@ -1,0 +1,422 @@
+@model ViewModels.AdminViewModel.Calender.MCalender
+@* /////////////////// Editor *@
+@if (ViewBag.er != null)
+{
+<p class="alert alert-success">@ViewBag.er</p>
+}
+<link rel="stylesheet" type="text/css" href="..\..\..\app-assets\vendors\css\editors\quill\katex.min.css">
+<link rel="stylesheet" type="text/css" href="..\..\..\app-assets\vendors\css\editors\quill\monokai-sublime.min.css">
+<link rel="stylesheet" type="text/css" href="..\..\..\app-assets\vendors\css\editors\quill\quill.snow.css">
+<link rel="stylesheet" type="text/css" href="..\..\..\app-assets\vendors\css\editors\quill\quill.bubble.css">
+<!-- END: Vendor CSS-->
+
+<!-- Basic Select2 start -->
+<section class="basic-select2" >
+  <form action="/admin/nemayeshgah/index" method="POST" enctype="multipart/form-data">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title"> ثبت نمایشگاه جدید </h4>
+          </div>
+          <div class="card-content">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 mb-2">
+                </div>
+
+                <div class="col-sm-12 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">عنوان نمایشگاه  </label>
+
+                      <select class="select2 form-control" asp-for="Title" asp-items="@ViewBag.tnam">
+                      
+                    </select>
+                  </fieldset>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                  <div class="form-group">
+                    <label for="basicInput">سال برگزاری </label>
+                    <select class="select2 form-control" asp-for="Years">
+                      <option value="1400">1400</option>
+                      <option value="1401">1401</option>
+                      <option value="1402">1402</option>
+                      <option value="1403">1403</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-12">
+                  <div class="form-group">
+                    <label for="basicInput">ماه برگزاری </label>
+                    <select class="select2 form-control" asp-for="Month" >
+                       <option value="فروردین">فروردین</option>
+                       <option value="اردیبهشت">اردیبهشت</option>
+                       <option value="خرداد">خرداد</option>
+                       <option value="تیر">تیر</option>
+                       <option value="مرداد">مرداد</option>
+                       <option value="شهریور">شهریور</option>
+                       <option value="مهر">مهر</option>
+                       <option value="آبان">آبان</option>
+                       <option value="آذر">آذر</option>
+                       <option value="دی">دی</option>
+                       <option value="بهمن">بهمن</option>
+                       <option value="اسفند">اسفند</option>
+                       
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-12">
+                  <div class="form-group">
+                    <label for="basicInput">روز شروع </label>
+                    <select class="select2 form-control" asp-for="StartingDay">
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                       <option value="6">6</option>
+                       <option value="7">7</option>
+                       <option value="8">8</option>
+                       <option value="9">9</option>
+                       <option value="10">10</option>
+                       <option value="11">11</option>
+                       <option value="12">12</option>
+                       <option value="13">13</option>
+                       <option value="14">14</option>
+                       <option value="15">15</option>
+                       <option value="16">16</option>
+                       <option value="17">17</option>
+                       <option value="18">18</option>
+                       <option value="19">19</option>
+                       <option value="20">20</option>
+                       <option value="21">21</option>
+                       <option value="22">22</option>
+                       <option value="23">23</option>
+                       <option value="24">24</option>
+                       <option value="25">25</option>
+                       <option value="26">26</option>
+                       <option value="27">27</option>
+                       <option value="28">28</option>
+                       <option value="29">29</option>
+                       <option value="30">30</option>
+                       <option value="31">31</option>
+                      
+
+                    </select>
+                  </div>
+                </div>
+                 <div class="col-sm-3 col-12">
+                  <div class="form-group">
+                    <label for="basicInput">روز پایان </label>
+                    <select class="select2 form-control" asp-for="EndDay">
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                       <option value="6">6</option>
+                       <option value="7">7</option>
+                       <option value="8">8</option>
+                       <option value="9">9</option>
+                       <option value="10">10</option>
+                       <option value="11">11</option>
+                       <option value="12">12</option>
+                       <option value="13">13</option>
+                       <option value="14">14</option>
+                       <option value="15">15</option>
+                       <option value="16">16</option>
+                       <option value="17">17</option>
+                       <option value="18">18</option>
+                       <option value="19">19</option>
+                       <option value="20">20</option>
+                       <option value="21">21</option>
+                       <option value="22">22</option>
+                       <option value="23">23</option>
+                       <option value="24">24</option>
+                       <option value="25">25</option>
+                       <option value="26">26</option>
+                       <option value="27">27</option>
+                       <option value="28">28</option>
+                       <option value="29">29</option>
+                       <option value="30">30</option>
+                       <option value="31">31</option>
+                    </select>
+                  </div>
+                </div>
+
+                 <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">شهر نمایشگاه</label>
+                    <select class="select2 form-control" asp-for="City" asp-items="@ViewBag.City">
+                      
+                    </select>
+                  </fieldset>
+                </div>
+                
+
+                <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">تاریخ تحویل سالن جهت غرفه سازی</label>
+                     <input type="text" class="form-control" asp-for="DataReceive" placeholder="1401/01/15"
+                      required>
+                  </fieldset>
+                </div>
+                
+                 <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">تاریخ تخریب  غرفه</label>
+                    <input type="text" class="form-control" asp-for="DateDestruction" placeholder="1401/01/15"
+                      required>
+                  </fieldset>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">زمان بازگشایی نمایشگاه</label>
+                   <select class="select2 form-control" asp-for="TimeReceive">
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                       <option value="6">6</option>
+                       <option value="7">7</option>
+                       <option value="8">8</option>
+                       <option value="9">9</option>
+                       <option value="10">10</option>
+                       <option value="11">11</option>
+                       <option value="12">12</option>
+                       <option value="13">13</option>
+                       <option value="14">14</option>
+                       <option value="15">15</option>
+                       <option value="16">16</option>
+                       <option value="17">17</option>
+                       <option value="18">18</option>
+                       <option value="19">19</option>
+                       <option value="20">20</option>
+                       <option value="21">21</option>
+                       <option value="22">22</option>
+                       <option value="23">23</option>
+                       <option value="24">24</option>
+                      
+                      
+
+                    </select>
+                  </fieldset>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">زمان بسته شدن نمایشگاه</label>
+                    <select class="select2 form-control" asp-for="TimeDestruction">
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                       <option value="6">6</option>
+                       <option value="7">7</option>
+                       <option value="8">8</option>
+                       <option value="9">9</option>
+                       <option value="10">10</option>
+                       <option value="11">11</option>
+                       <option value="12">12</option>
+                       <option value="13">13</option>
+                       <option value="14">14</option>
+                       <option value="15">15</option>
+                       <option value="16">16</option>
+                       <option value="17">17</option>
+                       <option value="18">18</option>
+                       <option value="19">19</option>
+                       <option value="20">20</option>
+                       <option value="21">21</option>
+                       <option value="22">22</option>
+                       <option value="23">23</option>
+                       <option value="24">24</option>
+                      
+                      
+
+                    </select>
+                  </fieldset>
+                </div>
+
+                <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">مجری</label>
+                    <input type="text" class="form-control" asp-for="executing" placeholder="مجری" required >
+                  </fieldset>
+                </div>
+
+                  <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">تلفن ثابت1</label>
+                    <input type="text" class="form-control" asp-for="Tel1" placeholder="021**********"
+                      required>
+                  </fieldset>
+                </div>
+
+                                <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">تلفن ثابت2</label>
+                    <input type="text" class="form-control" asp-for="Tel2" placeholder="021**********"
+                      required>
+                  </fieldset>
+                </div>
+
+                                <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">ناظر نمایشگاه</label>
+                    <input type="text" class="form-control" asp-for="Supervisor" placeholder="ناظر نمایشگاه"
+                      required>
+                  </fieldset>
+                </div>
+
+                                <div class="col-sm-3 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">تلفن ناظر</label>
+                    <input type="text" class="form-control" asp-for="SupervisorTel" placeholder="09********"
+                      required>
+                  </fieldset>
+                </div>
+
+                                <div class="col-sm-6 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">وب سایت نمایشگاه</label>
+                    <input type="text" class="form-control" asp-for="WebSite" placeholder="example.com"
+                      required>
+                  </fieldset>
+                </div>
+
+                                <div class="col-sm-6 col-12">
+                  <fieldset class="form-group">
+                    <label for="basicInput">محل برگزاری نمایشگاه</label>
+                     <select class="select2 form-control" asp-for="Location" asp-items="@ViewBag.nam">
+                      
+                    </select>
+                  </fieldset>
+                </div>
+
+
+
+              
+                <div class="col-sm-12 col-12">
+                  <fieldset class="form-group text-center ">
+                    @if (@Model !=null)
+                    {
+                      
+                   
+                    @if (Model.Baner != null)
+                    {
+                      <img id="output_image" src="~/fileupload/@Model.Baner" >
+                    }else{
+                       <img id="output_image" src="~/app-assets/images/icons/default.jpg" >
+
+                    }
+                    }else
+                    { <img id="output_image" src="~/app-assets/images/icons/default.jpg" >
+
+                    }
+                  </fieldset>
+
+                </div>
+
+                <div class="col-sm-6 col-12">
+                  <fieldset class="form-group">
+                    <div class="col-sm-6 col-12">
+                      <label for="file" class="btn btn-default">تصویری از نمایشگاه</label>
+                      <input required asp-for="Banerf" type="file" accept="image/*" onchange="preview_image(event)">
+                    </div>
+                    <p class="alert alert-warning mt-5">سایز عکس مناسب 400*1500 پیکسل است</p>
+                  </fieldset>
+                </div>
+
+
+
+
+@* 
+<div class="col-sm-12 col-12">
+  <fieldset class="form-group">
+    <label for="basicInput">کلمات کلیدی </label>
+    <input required type="text" class="form-control" asp-for="KeywordsBlo" placeholder="کلمات کلیدی را وارد کنید">
+  </fieldset>
+</div> *@
+
+
+
+@if (@Model !=null)
+{
+  
+}
+else{
+<div class="col-sm-12 col-12">
+  <fieldset style="text-align: center;" class="form-group mt-4">
+    <button type="submit" id="btn" class="btn btn-success mr-1 mb-1">ذخیره</button>
+
+  </fieldset>
+</div>
+}
+
+
+
+  </form>
+</section>
+
+<p id="mss" class="alert alert-success" style="display: none;">متن با موفقیت ارسال شد.</p>
+<p id="mss_danger" class="alert alert-danger" style="display: none;">متنی برای ارسال وجو ندارد.</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Basic editor end -->
+
+<script src="..\..\..\app-assets\vendors\js\vendors.min.js"></script>
+
+<script src="..\..\..\app-assets\vendors\js\editors\quill\quill.min.js"></script>
+
+<script src="..\..\..\app-assets\js\scripts\editors\editor-quill.min.js"></script>
+<script>
+  function sabt() {
+
+    if (document.getElementById("description").innerText != '') {
+      document.getElementById('jdr').value = document.getElementById("description").innerHTML;
+      $('#mss').css("display", "block");
+
+    }
+    else
+      $('#mss_danger').css("display", "block");
+
+
+  }
+</script>
+
+
+<!-- Basic Inputs end -->
+<script>
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>

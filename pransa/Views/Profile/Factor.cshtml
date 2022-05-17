@@ -1,0 +1,180 @@
+@model ViewModels.Area.Questions.Vm_Questions
+@using   Extensions;
+@using pransa.Models;
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+                           
+
+
+
+                    <style>
+    table{
+        width: 100%;
+        
+    }
+    td{
+        border:1px solid black;
+        text-align: center;
+        padding: 10px;
+        white-space: nowrap;
+    }
+    tr:nth-child(odd)
+    {
+       background-color: #80808096;
+       color:black;
+       font-size: 16px;
+       
+    }
+     th{
+           text-align: center;
+           white-space: nowrap;
+           padding: 10px;
+           
+           
+       }
+
+</style>
+<main class="main">
+    <!-- Start of Page Header -->
+       <h2 class="form-control  text-center mt-5" style="background-color: lightblue;margin-top: 40px;">
+
+              
+                لیست و وضعیت سفارشات
+            </h2>
+
+            <p class="mt-3 mb-3 text-center alert alert-primary p-2">برای دیدن بقیه جدول اسکرول کنید </p>
+        
+    <!-- End of Page Header -->
+
+    <!-- Start of Breadcrumb -->
+
+    <!-- End of Breadcrumb -->
+
+    <!-- Start of PageContent -->
+    <div class="page-content pt-2" >
+        <div class="card p-1" >
+             @*Titleeeeeeeeeeeeeeeeeeeeeeeeeeeeee*@
+
+            <div class="row justify-content-center"  id="cat">
+
+
+                <div class="col-12 mb-4">
+
+
+                    <div class="container justify-content-center">
+                        <div class="row" style="overflow: auto;">
+                          
+
+                          <table>
+
+                              <tr>
+                                  <th>ردیف</th>
+                                  <th>شناسه پیگیری</th>
+                                  <th>مبلغ (تومان)</th>
+                                  <th>تاریخ</th>
+                                  <th>وضعیت</th>
+                                  
+                              </tr>
+
+                              @{
+                                  int i=1;
+
+                             @if(ViewBag.order != null)
+                             {
+
+                             
+                              @foreach (var item in @ViewBag.order)
+                              {
+                                   <tr>
+                                  <td>@i</td>
+                                  <td class="product-name">@item.RFactor</td>
+                                                                                <td class="product-category">@item.Pay </td>
+                                                                                <td class="product-category">@item.Date_Order</td>
+                                                                                <td class="product-category">
+                                                                                   <a class="btn btn-success" href="/Pay/Index/@item.RFactor">جزییات و دانلود فایل ها</a>
+                                                                                </td>
+                                                                                 
+                              </tr>
+                                   i++;
+                              }
+                              }
+                              }
+                             
+
+                             
+                            
+
+
+                          </table>
+
+
+
+
+
+                      
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+
+             
+
+               
+
+
+            </div>
+
+
+            </div>
+    </div>
+            
+
+          
+
+                
+
+
+                
+
+               
+
+
+            
+
+
+           
+
+
+
+
+
+
+
+
+
+        
+
+    <!-- End of PageContent -->
+</main>
+<!-- End of Main -->
+<script>
+
+    function show()
+    {
+        document.getElementById('des').style.display='';
+
+    }
+     function hide()
+    {
+        document.getElementById('des').style.display='none';
+        
+    }
+
+
+
+
+
+
+</script>

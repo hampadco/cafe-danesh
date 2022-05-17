@@ -1,0 +1,187 @@
+@model ViewModels.AdminViewModel.Blog.Vm_Blog
+<style>
+    div.ql-tooltip 
+    {
+               display: none;
+    }
+</style>
+<style>
+    div.ql-tooltip 
+    {
+               display: none;
+    }
+    div.ql-editor{
+        text-align: justify !important;
+    }
+</style>
+
+
+
+<div class="container">
+
+
+     
+    <hr>
+    <h1 class="form-control text-center mt-5" style="background-color: lightblue;">@Model.TitleBLo</h1>
+
+  <div class="hero-slides owl-carousel">
+
+                         <div class="single-hero-slide" style="background-image: url('/fileupload/@Model.ImageMainBlo')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+           
+                 @if (ViewBag.qimg != null)
+                        {
+
+                         @foreach (var item in ViewBag.qimg)
+                            {
+
+                                  <div class="single-hero-slide" style="background-image: url('/fileupload/@item')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+                            }
+                        }
+
+
+                      </div>
+
+
+  <div>
+
+
+
+
+    <div class="product product-single row">
+
+        <div class="col-md-6 mb-4 mb-md-6">
+
+            <div class="product-details">
+                <img src="/assets/images/icons/article.jpg" alt="" style="width: 50px;border-radius: 50px;"><span style="font-size: 14px;">
+                    مقالات غرفه سازی
+                    </span>
+                <hr>
+               
+                <div class="product-bm-wrapper">
+
+                    <div class="product-meta mt-3">
+                        <div class="product-categories">
+                            دسته بندی:
+                            <span class="product-category"><a href="#" style="color:black">مقالات غرفه سازی</a></span>
+                        </div>
+
+                    </div>
+                </div>
+                @* <div class="ratings-container">
+                    <div class="ratings-full">
+                        <span class="ratings" style="width: 80%;"></span>
+                        <span class="tooltiptext tooltip-top"></span>
+                    </div>
+                    <a href="#" class="rating-reviews">(1 نظر )</a>
+                </div> *@
+
+
+
+
+
+
+               <hr class="product-divider">
+
+                <div class="">
+                    <h5 class="new-price">@Html.Raw(@Model.FullTextBlo)</h5>
+                </div>
+
+                  
+
+
+
+
+
+
+                <hr class="product-divider">
+
+                <div class="">
+                    <h5 class="new-price">اطلاعات ارتباطی</h5>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-6">
+
+                        <h5 class="new-price">شماره تلفن ثابت : </h5>
+
+                        <p>021-0000000</p>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="new-price">شماره تلفن همراه: </h5>
+
+                        <p>09120000000</p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-6">
+
+                        <h5 class="new-price">آدرس : </h5>
+
+                        <p>تهران-میرداماد خیابان شاه نظری ....</p>
+                    </div>
+                    
+
+                </div>
+
+                <div class="product-short-desc lh-2"></div>
+
+                <div class="social-links-wrapper">
+                    <div class="social-links">
+                        <div class="social-icons social-no-color border-thin">
+                            @if (@menu.SocialNetwork.Telegram !="")
+                            {
+                                <a href="@menu.SocialNetwork.Telegram" class="social-icon social-telegram fab fa-telegram"></a>
+
+                            }
+
+                            @if (@menu.SocialNetwork.Whatsapp !="")
+                            {
+                                   <a href="@menu.SocialNetwork.Whatsapp" class="social-icon social-whatsapp fab fa-whatsapp"></a>
+
+                            }
+
+                             @if (@menu.SocialNetwork.Instagram !="")
+                            {
+                                  <a href="@menu.SocialNetwork.Instagram" class="social-icon social-instagram fab fa-instagram"></a>
+
+                            }
+
+                        </div>
+                    </div>
+                    <span class="divider d-xs-show"></span>
+                    <div class="product-link-wrapper d-flex">
+                        <a href="#" class="btn-product-icon btn-wishlist w-icon-heart"><span></span></a>
+                        <!-- <a href="#" class="btn-product-icon btn-compare btn-icon-left w-icon-compare"><span></span></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     
+
+
+
+
+
+
+    </div>
+
+</div>

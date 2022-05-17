@@ -1,0 +1,23 @@
+ @if (ViewBag.qimg != null)
+                        {
+
+                          <div class="row justify-content-center" style="margin-top: 100px;">
+
+                         @foreach (var item in ViewBag.qimg)
+                            {
+
+                                    <div class="col-6 alert alert-light text-center">
+                                    <a href="" download="/fileupload/@item.ImagePath">
+                                      <img src="/assets/images/d.png" alt="" style="min-width:300px ; max-width: 300px;">
+                                    </a>
+
+                                  </div>
+
+
+                                
+                            }
+                            </div>
+                        }
+
+
+

@@ -1,0 +1,210 @@
+@{
+    Layout = "_Layoutprofile";
+}
+@using pransa.Models;
+@model ViewModels.AdminViewModel.Users.Vm_User;
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+                            <div class="dt-sl dt-sn mb-3">
+                                <div class="profile-menu-section dt-sl">
+                                    <div class="label-profile-menu mt-2 mb-2">
+                                        <span>حساب کاربری شما</span>
+                                    </div>
+                                    <div class="profile-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="/profile/Index" class="active">
+                                                    <i class="mdi mdi-account-circle-outline"></i>
+                                                    پروفایل
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/profile/update">
+                                                    <i class="mdi mdi-account-edit-outline"></i>
+                                                    ویرایش اطلاعات شخصی 
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/profile/factor">
+                                                    <i class="mdi mdi-basket"></i>
+                                                    همه سفارش ها
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/profile/nazarat">
+                                                    <i class="mdi mdi-backburger"></i>
+                                                     پرسش و پاسخ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/profile/favorite">
+                                                    <i class="mdi mdi-heart-outline"></i>
+                                                    لیست علاقمندی ها
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End Sidebar -->
+
+                    <!-- Start Content -->
+                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12 mt-5 pr-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="px-3 px-res-0">
+                                    <div
+                                        class="section-title text-sm-title title-wide mb-1 no-after-title-wide dt-sl mb-2 px-res-1">
+                                        <h2> نمایش اطلاعات شخصی</h2>
+                                    </div>
+                                    <div class="form-ui additional-info dt-sl dt-sn pt-4">
+                                    @if ( ViewBag.us != null)
+                                    {
+                                        @foreach (var item in ViewBag.us)
+                                        { 
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-row-title">
+                                                        <h3>نام</h3>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <p class="input-ui pt-2 pr-2">
+                                                            @item.UserNameUs
+                                                        </P>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-row-title">
+                                                        <h3> نام خانوادگی</h3>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <p class="input-ui pt-2 pr-2">
+                                                            @item.UserFamilyUs
+                                                        </P>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-row-title">
+                                                        <h3>کد ملی</h3>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <p class="input-ui pt-2 pr-2">
+                                                            @item.NationalCode
+                                                        </P>
+                                                    </div>
+                                                </div>
+                                                 <div class="col-md-6 mb-3">
+                                                    <div class="form-row-title">
+                                                        <h3>شماره موبایل</h3>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <p class="input-ui pt-2 pr-2">
+                                                            @item.PhoneUs
+                                                        </P>
+                                                    </div>
+                                                </div> 
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-row-title">
+                                                        <h3> آدرس برای ارسال سفارشات</h3>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <p class="input-ui pt-2 pr-2">
+                                                            @item.AddressUs
+                                                        </P>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-row-title">
+                                                        <h3> کد پستی برای ارسال سفارشات</h3>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <p class="input-ui pt-2 pr-2">
+                                                            @item.Post
+                                                        </P>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3 justify-content-center">
+                                                    <div class="form-row-title">
+                                                        <h3>عکس پروفایل</h3>
+                                                    </div>
+                                                    <div class="form-row mt-2">
+                                                        <div class="input-group">
+                                                            <div class="custom-file">
+                                                            </div>
+                                                        </div>
+                                                    <div class="pt-2 pb-2 mb-3 dt-sl mr-5">
+                                                        <img style="border-radius: 15px; width: 150px;height: 150px;"  src="~/fileupload/@item.ProfileImageUs" style="width: 150px; height: 150px;" class="rounded-circle" alt="عکس پروفایل">
+                                                    </div>
+
+                                                    </div>
+                                                </div>
+                                           
+                                            </div>
+                                        }
+                                    } 
+                                    @* <form action="/profile/index" method="POST">
+                                    <p asp-for="Family"></p>
+                                    <input type="text" asp-for="Family">
+                                    </form> *@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content -->
+
+                </div>
+                <!-- Start Product-Slider -->
+             
+                <!-- End Product-Slider -->
+            </div>
+        </main>
+        <!-- End main-content -->
+
+        <!-- Start footer -->
+      
+        <!-- End footer -->
+
+    </div>
+
+    <!-- colorPanel -->
+    @* <div id="colorswitch-option">
+        <button><i class="mdi mdi-settings"></i></button>
+        <ul>
+            <li class="active" data-path="~/assets/css/colors/default.css"><span
+                    style="background-color: #f7858d;"></span></li>
+            <li data-path="~/assets/css/colors/amber-color.css"><span style="background-color: #ffab00;"></span></li>
+            <li data-path="~/assets/css/colors/blue-color.css"><span style="background-color: #2979ff;"></span></li>
+            <li data-path="~/assets/css/colors/blue-grey-color.css"><span style="background-color: #607d8b;"></span>
+            </li>
+            <li data-path="~/assets/css/colors/brown-color.css"><span style="background-color: #795548;"></span></li>
+            <li data-path="~/assets/css/colors/cyan-color.css"><span style="background-color: #00bcd4;"></span></li>
+            <li data-path="~/assets/css/colors/green-color.css"><span style="background-color: #4caf50;"></span></li>
+            <li data-path="~/assets/css/colors/indigo-color.css"><span style="background-color: #3f51b5;"></span></li>
+            <li data-path="~/assets/css/colors/lime-color.css"><span style="background-color: #cddc39;"></span></li>
+            <li data-path="~/assets/css/colors/orange-color.css"><span style="background-color: #ff9800;"></span></li>
+            <li data-path="~/assets/css/colors/red-color.css"><span style="background-color: #f44336;"></span></li>
+            <li data-path="~/assets/css/colors/teal-color.css"><span style="background-color: #009688;"></span></li>
+            <li data-path="~/assets/css/colors/purple-color.css"><span style="background-color: #9c27b0;"></span></li>
+        </ul>
+    </div> *@
+    <!-- end colorPanel -->
+
+
+    <!-- Core JS Files -->
+    <script src="~/assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="~/assets/js/vendor/popper.min.js"></script>
+    <script src="~/assets/js/vendor/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="~/assets/js/vendor/owl.carousel.min.js"></script>
+    <script src="~/assets/js/vendor/jquery.nicescroll.min.js"></script>
+    <script src="~/assets/js/vendor/jquery.horizontalmenu.js"></script>
+    <script src="~/assets/js/vendor/nouislider.min.js"></script>
+    <script src="~/assets/js/vendor/wNumb.js"></script>
+    <script src="~/assets/js/vendor/ResizeSensor.min.js"></script>
+    <script src="~/assets/js/vendor/theia-sticky-sidebar.min.js"></script>
+    <!-- Main JS File -->
+    <script src="~/assets/js/main.js"></script>

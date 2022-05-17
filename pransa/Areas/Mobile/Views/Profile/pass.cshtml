@@ -1,0 +1,140 @@
+@model ViewModels.AdminViewModel.Users.Vm_User
+
+<!-- Start of Main -->
+
+<style>
+    p.t {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 5px;
+
+    }
+
+   
+
+
+    div.col-md-3 {
+        @*border:1pxsolidgray;*@padding: 10px;
+        margin: 0px;
+        margin-bottom: 15px
+    }
+
+    p.text-uppercase {
+        font-size: large;
+    }
+</style>
+<main class="main">
+    <!-- Start of Page Header -->
+
+
+
+            <h2 class="form-control  text-center mt-5" style="background-color: lightblue;margin-top: 40px;">
+
+                
+
+                تغییر رمز عبور
+
+            </h2>
+        
+
+
+    <!-- End of Page Header -->
+
+    <!-- Start of Breadcrumb -->
+
+    <!-- End of Breadcrumb -->
+
+    <!-- Start of PageContent -->
+    <div class="page-content pt-2">
+        <div class="container card">
+
+
+
+            <form action="/profile/pass" method="post">
+
+                <div class="row justify-content-center" style=" border:1px solid gray; 
+                                    border-radius: 15px;">
+
+
+
+                    @if (TempData["msg"] != null)
+
+                    {
+                        <p style="color:green;text-align: center;padding: 20px;font-size: 18px;">@TempData["msg"]</p>
+
+
+                    }
+
+                    @if (TempData["msge"] != null)
+
+                    {
+                        <p style="color: red;text-align: center;padding: 20px;font-size: 18px;">@TempData["msge"]</p>
+
+
+                    }
+
+
+
+
+
+
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> ورود رمز عبور جدید </p>
+                                <input type="password" class="form-control t" placeholder="رمز عبور جدید"
+                                    name="PasswordUs" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> تکرار رمز عبور جدید </p>
+                                <input type="password" class="form-control t" placeholder="تکرار رمز عبور" name="repass"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="row justify-content-center mt-5">
+
+                        <button class="btn btn-success 12" style="font-size: 15px;" type="submit">ذخیره</button>
+                        <button class="btn btn-danger col-12 mt-1" style="font-size: 15px;"
+                            type="reset">انصراف</button>
+<br><br>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+            </form>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- End of PageContent -->
+</main>
+<!-- End of Main -->

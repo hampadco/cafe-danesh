@@ -1,0 +1,114 @@
+@model ViewModels.Area.Questions.Vm_Questions
+@{
+    Layout = "_Layoutprofile";
+}
+@using pransa.Models;
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+                            <div class="col-12 dt-sl dt-sn mb-3">
+                                <div class="profile-menu-section dt-sl">
+                                    <div class="label-profile-menu mt-2 mb-2">
+                                        <span> سفارشات شما</span>
+                                    </div>
+                                    <div class="profile-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="/profile/Index">
+                                                    <i class="mdi mdi-account-circle-outline"></i>
+                                                    پروفایل
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/profile/update">
+                                                    <i class="mdi mdi-account-edit-outline"></i>
+                                                    ویرایش اطلاعات شخصی 
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/profile/factor" class="active">
+                                                    <i class="mdi mdi-basket"></i>
+                                                    همه سفارش ها
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/profile/nazarat" >
+                                                    <i class="mdi mdi-backburger"></i>
+                                                     پرسش و پاسخ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/profile/favorite">
+                                                    <i class="mdi mdi-heart-outline"></i>
+                                                    لیست علاقمندی ها
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                            <!-- Start Content -->
+                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12 mt-5 pr-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="px-3 px-res-0">
+                                    <div
+                                        class="section-title text-sm-title title-wide mb-1 no-after-title-wide dt-sl mb-2 px-res-1">
+                                        <h2> جزئیات سفارش من </h2>
+                                    </div>
+                                    <div class="form-ui additional-info dt-sl dt-sn pt-1">
+                                        <div class="ah-tab-content-wrapper dt-sl px-res-0">
+                                            <div class="ah-tab-content dt-sl" data-ah-tab-active="true">
+                                                <div class="row mx-0 px-res-0">
+                                                            <div class="table-responsive">
+                                                              <table class="table data-list-view">
+                                                                <thead>
+                                                                  <tr>
+                                                                    <th></th>
+                                                                    <th>ردیف</th>
+                                                                    <th>کد صفحه  </th>
+                                                                    <th> نام صفحه    </th>
+                                                                     <th>تعداد</th>
+                                                                    <th>مبلغ (تومان)</th>
+                                                                     <th>مبلغ کل (تومان)</th>
+                                                                    <th> شناسه پیگیری</th>
+                                                                  </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                  @{
+                                                                      if (ViewBag.order != null)
+                                                                      {
+                                                                        int i=1;
+                                                                        foreach (var item in ViewBag.order)
+                                                                        {
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td class="product-category"> @i</td>
+                                                                                <td class="product-name">@item.Product_Id</td>
+                                                                                <td class="product-category">@item.product_Name </td>
+                                                                                <td class="product-category">@item.Product_Count </td>
+                                                                                <td class="product-name">@item.product_Price</td>
+                                                                                <td class="product-name">@item.Total_sum</td>
+                                                                                <td class="product-name">@item.RFactor</td>
+                                                                            </tr>
+                                                                           i++;
+                                                            
+                                                                        }
+                                                            
+                                                                      }
+                                                                    }
+                                                                </tbody>
+                                                              </table>
+                                                            </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content -->

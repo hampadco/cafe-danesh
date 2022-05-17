@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  @using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+  
+  <head>
+    <script >
+
+
+
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+    <meta name="description" content="Suha - Multipurpose Ecommerce Mobile HTML Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#100DD1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- The above tags *must* come first in the head, any other head content must come *after* these tags-->
+    <!-- Title-->
+        @if(menu.Title != null)
+    {
+    <meta name="author" content="@menu.Title">
+    <meta name="description" content="@menu.Title">
+    <meta name="keywords" content="@menu.Title">
+    <title>@menu.Title</title>
+    }
+    else
+    {
+    <title>عنوان وب سایت شما</title>
+    }
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <!-- Favicon-->
+    <link rel="icon" href="~/fileupload/@menu.favicon">
+    <!-- Apple Touch Icon-->
+    <link rel="apple-touch-icon" href="/mobile/img/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/mobile/img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/mobile/img/icons/icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/mobile/img/icons/icon-180x180.png">
+    <!-- CSS Libraries-->
+    <link rel="stylesheet" href="/mobile/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/mobile/css/animate.css">
+    <link rel="stylesheet" href="/mobile/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/mobile/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/mobile/css/lineicons.min.css">
+    <link rel="stylesheet" href="/mobile/css/magnific-popup.css">
+    <link rel="stylesheet" href="/previewimg/styleimg.css">
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="/mobile/style.css">
+    <!-- Web App Manifest-->
+    <link rel="manifest" href="/mobile/manifest.json">
+    <style>
+      span{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      a{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    </style>
+
+    <style>
+
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 10px !important;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+.h5, h5 {
+    font-size: 1rem !important;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+</style>
+  </head>
+  <body>
+    <!-- Preloader-->
+    
+    <!-- Header Area-->
+    <div class="header-area" id="headerArea">
+      <div class="container h-100 d-flex align-items-center justify-content-between">
+        <!-- Logo Wrapper-->
+
+
+          @if(menu.logo != null)
+                                    {
+                                       
+                                                <div class="logo-wrapper"><a href="/"><img src="~/fileupload/@menu.logo" alt="" style="width: 75px !important;"></a></div>
+
+                                    }
+                                    else
+                                    {
+                                     <div class="logo-wrapper"><a href="/"> لوگوی شما</a></div>
+                                    }
+
+
+
+
+
+        <!-- Search Form-->
+        <div class="top-search-form">
+          <form action="/home/search" method="post">
+            <input class="form-control" type="search" placeholder="کلمه کلیدی خود را وارد کنید" id="myInput" autocomplete="off" name="myinput">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <!-- Navbar Toggler-->
+        <div class="suha-navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#suhaOffcanvas" aria-controls="suhaOffcanvas"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-start suha-offcanvas-wrap" tabindex="-1" id="suhaOffcanvas" aria-labelledby="suhaOffcanvasLabel">
+      <!-- Close button-->
+      <button class="btn-close btn-close-white text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <!-- Offcanvas body-->
+      <div class="offcanvas-body">
+        <!-- Sidenav Profile-->
+        <div class="sidenav-profile">
+          <div class="user-profile"><img src="~/fileupload/@menu.logo" alt=""></div>
+          <div class="user-info">
+            <h6 class="user-name mb-1">@menu.Title</h6>
+            @* <p class="available-balance">جمع کل <span class="counter">90000 </span> <span>تومان</span> </p> *@
+          </div>
+        </div>
+        <!-- Sidenav Nav-->
+        <ul class="sidenav-nav ps-0">
+
+           @if (User.Identity.IsAuthenticated)
+             {
+                                        <li><a href="/profile/index"><i class="lni lni-user"></i> حساب کاربری شما</a></li>
+
+             }
+             else
+             {
+                         <li><a href="/login/login"><i class="lni lni-user"></i> ثبت نام | ورود</a></li>
+
+
+
+             }
+
+
+                @if (@HttpContextAccessor.HttpContext.Session.GetString("count") ==null)
+                                        {
+                                           <li><a href="/"><i class="lni lni-alarm lni-tada-effect"></i>سبد خرید شما <span class="ms-3 badge badge-warning">0</span></a></li>
+ 
+                                        }
+                                        else{
+                                           
+                                            
+
+                                             <li><a href="/order/index"><i class="lni lni-alarm lni-tada-effect"></i>سبد خرید شما <span class="ms-3 badge badge-warning">@HttpContextAccessor.HttpContext.Session.GetString("count")</span></a></li>                                   
+
+                                        }
+
+
+
+
+
+               
+          
+          <li class="suha-dropdown-menu"><a href="/"><i class="lni lni-list"></i>دسته بندی ها </a>
+            <ul>
+
+
+               @if( menu.cat != null)
+              {
+                @foreach (var item in menu.cat)
+                {
+                  @if (item.FatherIdCat==0)
+                  {
+                   
+
+                     <li><a href="/home/selectcat/@item.Id">@item.NameCat</a></li>
+                  }
+                }
+
+              }
+
+
+
+
+
+
+            
+
+            </ul>
+          </li>
+          <li><a href="/blog/category/1"><i class="lni lni-empty-file"></i>مقالات</a></li>
+                    <li><a href="/home/categoryshop"><i class="lni lni-shopify"></i>فروشگاه</a></li>
+             @if (User.Identity.IsAuthenticated)
+             {
+                         <li><a href="/home/exit"><i class="lni lni-exit"></i>خروج</a></li>
+
+             }
+          @* <li><a href="/mobile/intro.html"><i class="lni lni-power-switch"></i>خروج از سیستم</a></li> *@
+        </ul>
+      </div>
+    </div>
+    @* //////////// *@
+
+    @RenderBody()
+
+    @* ///////////////// *@
+ <!-- Internet Connection Status-->
+    <div class="internet-connection-status" id="internetStatus"></div>
+    <!-- Footer Nav-->
+   
+    <!-- Footer Nav-->
+    <div class="footer-nav-area" id="footerNav">
+      <div class="container h-100 px-0">
+        <div class="suha-footer-nav h-100">
+          <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
+            <li class="active"><a href="/"><i class="lni lni-home"></i>خانه</a></li>
+            <li><a href="/home/selectcat/0"><i class="lni lni-list"></i>دسته بندی ها</a></li>
+
+             @if (@HttpContextAccessor.HttpContext.Session.GetString("count") ==null)
+                                        {
+                                           <li><a href="#"><i class="lni lni-shopping-basket"></i>خرید</a></li>
+ 
+                                        }
+                                        else{
+                                           
+                                             <li><a href="/order/index"><i class="lni lni-shopping-basket"></i>(@HttpContextAccessor.HttpContext.Session.GetString("count"))</a></li>                                      
+
+                                        }
+
+           
+
+
+
+            <li><a href="/blog/category/1"><i class="lni lni-star"></i>مقالات</a></li>
+            @if (User.Identity.IsAuthenticated)
+            {
+                          <li><a href="/profile/index"><i class="lni lni-user"></i>حساب کاربری</a></li>
+
+            }else
+            {
+                              <li><a href="/login/login"><i class="lni lni-user"></i>حساب کاربری</a></li>
+          
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+
+          <div class="foot3 row" >
+
+        
+               
+                  @if(menu.watsap != null)
+                  {
+                    <a href="tel:@menu.phone"  class="  col-12" >
+
+                        <img src="~/fileupload/@menu.watsap" height="50px" width="50px" >
+                    </a>
+
+                  }else
+                  {
+                     <a href="https://api.whatsapp.com/send?phone= @menu.Whts" class="btn btn-success form-control col-4" style="font-size: 17px; border: 1px solid black;">واتساپ</a>
+
+                  }
+                   
+                   @if(menu.contactus != null)
+                  {
+                    <a href="https://api.whatsapp.com/send?phone= @menu.Whts"  class=" col-12 mt-1" >
+
+                        <img src="~/fileupload/@menu.contactus" height="50px" width="50px" >
+                    </a>
+
+                  }else
+                  {
+                                                          <a href="tel:@menu.phone"  class="btn btn-success form-control col-4 mt-1" style="font-size: 17px; border: 1px solid black; ">تماس یا ما</a>
+
+
+                  }
+
+
+                    @* @if(menu.contactus != null)
+                  {
+                    <a href="https://cafebazaar.ir/app/ir.orjikala.company"  class=" col-4" >
+
+                        <img src="~/fileupload/@menu.app" height="75px" width="75px" >
+
+
+                    </a>
+
+                  }else
+                  {
+                     <a href="https://cafebazaar.ir/app/ir.orjikala.company" class="btn btn-success form-control col-4" style="font-size: 17px; border: 1px solid black; ">دانلود اپ </a>
+
+                  } *@
+
+
+
+
+
+
+
+	 
+            </div>
+
+            <style>
+                .foot3 {
+    position: fixed;
+    @* left: 0; *@
+    bottom: 60px;
+    width: auto;
+    @* background-color:#d4d4d4; *@
+    color: white;
+    text-align: :right;
+    z-index: 5;
+    margin-top: 10px;
+    padding: 15px;
+}
+            </style>
+
+    </div>
+    <!-- All JavaScript Files-->
+    <script src="/mobile/js/bootstrap.bundle.min.js"></script>
+    <script src="/mobile/js/jquery.min.js"></script>
+    <script src="/mobile/js/waypoints.min.js"></script>
+    <script src="/mobile/js/jquery.easing.min.js"></script>
+    <script src="/mobile/js/owl.carousel.min.js"></script>
+    <script src="/mobile/js/jquery.magnific-popup.min.js"></script>
+    <script src="/mobile/js/jquery.counterup.min.js"></script>
+    <script src="/mobile/js/jquery.countdown.min.js"></script>
+    <script src="/mobile/js/jquery.passwordstrength.js"></script>
+    <script src="/mobile/js/dark-mode-switch.js"></script>
+    <script src="/mobile/js/no-internet.js"></script>
+    <script src="/mobile/js/active.js"></script>
+    <script src="/mobile/js/pwa.js"></script>
+      <script src="/previewimg/scriptimg.js"></script>
+  </body>
+
+</html>
+
+<script>
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+
+ 
+var countries =@Html.Raw(JsonConvert.SerializeObject(@menu.find));;
+/*An array containing all the country names in the world:*/
+/*var countries 
+
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+</script>
+
+
+ @using Newtonsoft.Json

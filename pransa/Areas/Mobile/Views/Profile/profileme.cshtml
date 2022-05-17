@@ -1,0 +1,239 @@
+<!-- Start of Main -->
+@model ViewModels.AdminViewModel.Users.Vm_User
+<style>
+    p.t {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 5px;
+
+    }
+
+   
+
+
+    div.col-md-3 {
+        @*border:1pxsolidgray;*@padding: 10px;
+        margin: 0px;
+        margin-bottom: 15px
+    }
+
+    p.text-uppercase {
+        font-size: large;
+    }
+</style>
+<main class="main">
+    <!-- Start of Page Header -->
+    
+
+            <h2 class="form-control  text-center mt-5 p-2" style="background-color: lightblue;margin-top: 60;">
+
+               
+
+                تنظیمات پروفایل
+
+            </h2>
+    <!-- End of Page Header -->
+
+    <!-- Start of Breadcrumb -->
+
+    <!-- End of Breadcrumb -->
+
+    <!-- Start of PageContent -->
+    <div class="page-content pt-2">
+        <div class="container">
+
+
+
+            <form action="/profile/profileme" method="post" enctype="multipart/form-data">
+                <div class="row justify-content-center card" style=" border:1px solid gray; 
+                                    border-radius: 15px;">
+
+                    <div class="col-12 text-center mb-4">
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input asp-for="NameCompany" type="text" class="form-control t"
+                                    placeholder=" نام شرکت (برند) یا نام شخصی">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"></p>
+                                <input asp-for="Tel" type="text" class="form-control t" placeholder="تلفن ثابت">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input readonly asp-for="PhoneUs" type="text" class="form-control t" placeholder="تلفن همراه">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input asp-for="EmailUS" type="EmailUS" class="form-control t" placeholder="آدرس ایمیل">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input asp-for="Ostan" type="text" class="form-control t" placeholder=" استان">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"></p>
+                                <input asp-for="City" type="text" class="form-control t" placeholder=" شهرستان">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input asp-for="AddressUs" type="text" class="form-control t"
+                                    placeholder="آدرس دفتر یا محل کار">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input asp-for="Website" type="text" class="form-control t" placeholder="آدرس وب سایت">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input asp-for="Instagram" type="text" class="form-control t"
+                                    placeholder="لینک اینستاگرام">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input asp-for="Telegram" type="text" class="form-control t" placeholder="لینک تلگرام">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input asp-for="WhatsApp" type="text" class="form-control t" placeholder="لینک واتساپ ">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mb-4">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <p class="t"> </p>
+                                <input asp-for="Shoar" type="text" class="form-control t" placeholder="شعار تبلیغاتی">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center" style="padding-right: 50px;">
+                        <div class="drop-zone col-12 ">
+                            @if (Model.ProfileImageUs != null)
+                            {
+                                <span class="drop-zone__prompt"> 
+                                      <img src="/fileupload/@Model.ProfileImageUs" width="100%" alt=""
+                                    srcset=""> 
+                                </span>
+                            }else
+                            {
+                              <span class="drop-zone__prompt"> بارگذاری عکس پروفایل یا لوگو</span>
+                            }
+                            <input asp-for="imgf" type="file"  class="drop-zone__input">
+                        </div>
+                        <div class="drop-zone col-12 mt-3 " style="max-width: 100% !important;">
+                            @if (@Model.CoverImage != null)
+                            {
+                                <span class="drop-zone__prompt"> 
+                                      <img  src="/fileupload/@Model.CoverImage" width="100%" alt=""
+                                    srcset=""> 
+                                </span>
+                            }else
+                            {<span class="drop-zone__prompt"><img src="/assets/images/up2.png" width="100%" alt=""
+                                    srcset="" >انتخاب عکس کاور یا بنر</span>
+                            }
+                            
+                            <input asp-for="CoverImagef" type="file" class="drop-zone__input">
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-center mt-5 mb-10" style="padding-right: 50px;">
+
+                        <button class="btn btn-success col-12">ذخیره</button>
+                        <button class="btn btn-danger col-12 mt-1">انصراف</button>
+
+                    </div>
+
+                </div>
+                <br><br>
+                <br><br>
+
+            </form>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- End of PageContent -->
+</main>
+<!-- End of Main -->

@@ -1,0 +1,303 @@
+@{
+  Layout=null;
+}
+
+@model ViewModels.AdminViewModel.Users.Vm_User;
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+
+    <title>بخش مدیریت </title>
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="سـئـول" />
+    <meta name="author" content="JafarAbbasi" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+    <!-- WebFont.js -->
+    <script>
+      WebFontConfig = {
+        google: { families: ["Poppins:400,500,600,700"] },
+      };
+      (function (d) {
+        var wf = d.createElement("script"),
+          s = d.scripts[0];
+        wf.src = "/assets/js/webfont.js";
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+      })(document);
+    </script>
+
+    <link
+      rel="preload"
+      href="/assets/vendor/fontawesome-free/webfonts/fa-regular-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/assets/vendor/fontawesome-free/webfonts/fa-solid-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/wolmart87d5.ttf?png09e"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+
+    <!-- Vendor CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/vendor/fontawesome-free/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/vendor/owl-carousel/owl.carousel.min.css"
+    />
+
+    <!-- Plugin CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/vendor/magnific-popup/magnific-popup.min.css"
+    />
+
+    <!-- Default CSS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.min.css" />
+
+    <style>
+      span{
+        color:red;
+        margin-top: 20px;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="" style="width: 100%;"></div>
+
+
+<div class="page-wrapper">
+  <!-- Start of Main -->
+  <main class="main login-page">
+    <!-- Start of Breadcrumb -->
+    <nav class="breadcrumb-nav">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="/">صفحه اصلی </a></li>
+          <li>حساب من</li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End of Breadcrumb -->
+    
+      <div class="page-content mt-10">
+        <div class="container row justify-content-center">
+         
+          <div class="login-popup col-12" style="background-color: white">
+            <div class="tab tab-nav-boxed tab-nav-center tab-nav-underline">
+              <ul class="nav nav-tabs text-uppercase" role="tablist">
+                <li class="nav-item">
+                  <a href="#sign-in" class="nav-link active" style="font-size: large">ورود
+                  </a>
+                </li>
+                @* <li class="nav-item" href="/register/register">
+                  <a href="/register/register" class="SetLink" style="font-size: large">عضویت</a>
+                </li> *@
+              </ul>
+              <div class="tab-content">
+
+             
+
+
+     
+
+                <div class="tab-pane active" id="sign-in">
+                 
+      <form action="/admin/home/checklogin" method="post">
+
+                    @if (ViewBag.msg != null)
+                        {
+                            <p style="text-align: center;background-color: #ec02029e;color:white;margin:20px;border-radius: 15px;padding: 10px;">@ViewBag.msg </p>
+                        }
+                  <div class="form-group">
+                    <input style="
+                          padding: 15px;
+                          border: 1px solid rgb(207, 206, 206);
+                          border-radius: 8px;
+                        " type="text" class="form-control" name="UserNameUs"  
+                      placeholder="نام کاربری خود را وار کنید "  />
+
+                      
+                  </div>
+                  <div class="form-group mb-0">
+                    <input style="
+                          padding: 15px;
+                          border: 1px solid rgb(207, 206, 206);
+                          border-radius: 8px;
+                        " type="password" class="form-control" name="PasswordUs" 
+                      placeholder="گذرواژه امن خود را وارد نمایید" />
+                       
+                  </div>
+                  <div class="row">
+                    <div class="col-6 ">
+
+                      <img src="/Captcha/GetCaptchaImage" alt="" style="
+                            margin-top: 30px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 5px;
+                            height: 40px;
+
+                          ">
+                    </div>
+
+                    <div class="col-6 justify-content-center">
+                      <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control mt-5" name="Token" 
+                        placeholder="اعداد امنیتی را وارد نمایید" autocomplete="off"  />
+                       
+                    </div>
+                  </div>
+
+                  @* <div style="margin-top:20px">
+                    <input type="checkbox" name="Remember" style="width: 20px;height: 20px;margin-top: 7px;" value="true" >
+                    <span style="margin-right: 5px;color: black;margin-top: 0;display: inline-block;">مرا بخاطر بسپار </span>
+                  </div> *@
+                   <button type="submit" class="btn btn-primary mt-7 form-control"
+                    style="color:white;padding: 18px; border-radius: 8px; font-size: 25px;background-color: #FFCC01;">ورود
+                  </button>
+     </form>
+                  <!-- <div class="form-checkbox d-flex align-items-center justify-content-between">
+                                        <input type="checkbox" class="custom-checkbox" id="remember1" name="remember1" ="">
+                                        <label for="remember1">مرا به خاطر بسپار </label>
+                                        <a href="#">فراموشی رمز عبور؟ </a>
+                                    </div> -->
+                 
+
+                  
+               @* @if (TempData["msg"] != null)
+                {
+                  <p style="margin-top: 5px;background-color:#ff00007d;padding:10px;color:white;text-align: center;height: 40px;border-radius: 5px;">@TempData["msg"]</p>
+                } *@
+
+                  @* <p style="
+                        text-align: center;
+                        color: rgb(24, 24, 243);
+                        margin-top: 30px;
+                      ">
+                    رمز را فراموش کرده ام
+                  </p> *@
+                </div>
+
+
+                @* <div class="tab-pane" id="sign-up">
+                  <form action="/login/Register" method="post" >
+                  <div class="form-group">
+                    <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control"  
+                      placeholder="ایمیل  خود را وارد  نمایید"  />
+                  </div>
+                  <div class="form-group">
+                    <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control"  
+                      placeholder="موبایل خود را وارد  نمایید"  />
+                  </div>
+                  <div class="form-group mb-0">
+                    <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control" 
+                      placeholder="گذرواژه امن خود را وارد نمایید"  />
+                  </div>
+                   <div class="form-group mb-0 mt-5">
+                    <input style="
+                            padding: 15px;
+                            border: 1px solid rgb(207, 206, 206);
+                            border-radius: 8px;
+                          " type="text" class="form-control" 
+                      placeholder="تکرار گذرواژه امن خود را وارد نمایید "  />
+                  </div>
+                
+                  <div class="form-checkbox user-checkbox mt-5">
+                    <input type="radio" class="form-check-input p-3 " name="check-customer" />
+                    <label for="check-customer" class="check-customer mb-1">کاربر سایت خواهم بود</label>
+                    <br />
+
+                    <input type="radio" class="form-check-input mt-3 p-3" name="check-customer"  />
+                    <label for="check-seller" class="form-check-input check-seller">غرفه ساز یا تامین کننده هستم</label>
+                  </div>
+
+                  <div class="form-checkbox d-flex align-items-center justify-content-between mb-5">
+                    <input type="checkbox" class="custom-checkbox" id="remember" name="remember" ="" />
+                    <label for="remember" class="font-size-md">من موافقم با
+                      <a href="#" class="text-primary font-size-md">سیاست حفظ حریم خصوصی
+                      </a></label>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-7 form-control"
+                    style="padding: 18px; border-radius: 8px; font-size: 25px;background-color: #FFCC01;color:white">عضو شوید
+                  </button>
+                  </form>
+                </div> *@
+                
+
+
+
+
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    
+  </main>
+  <!-- End of Main -->
+</div>
+
+</div>
+
+
+ <!-- End of Page Wrapper -->
+
+    <!-- Plugin JS File -->
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/main.min.js"></script>
+  </body>
+</html>

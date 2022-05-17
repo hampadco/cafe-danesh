@@ -1,0 +1,37 @@
+  <!-- ماشین آلات اداری-->
+  @model IEnumerable<ViewModel.AdminViewModel.Page.MPages>
+      <div class="featured-products-wrapper py-3">
+        <div class="container" style="margin-top: 50px !important;">
+          <div class="section-heading d-flex align-items-center justify-content-between">
+            <h1 class="text-center alert alert-light form-control">نتایج جستجو </h1>
+          </div>
+          <div class="row g-3">
+            <!-- Featured Product Card-->
+
+             @if (Model.Count() != 0)
+                {
+                    @foreach (var item in Model)
+                    {
+                      <div class="col-6 col-md-4 col-lg-3" >
+                        <div class="card featured-product-card">
+                          <div class="" style="min-height: 170px;">
+                            <!-- Badge--><span class="badge badge-warning custom-badge"><i class="lni lni-star"></i></span>
+                            <div class="product-thumbnail-side">
+                              <!-- Wishlist Button -->
+                              <!-- Thumbnail --><a class="product-thumbnail d-block" href="home/details/@item.Id"><img src="/fileupload/@item.MainImage" alt="" ></a>
+                            </div>
+                            <div class="product-description">
+                              <!-- Product Title --><a class="product-title d-block" href="home/details/@item.Id" style="text-overflow: ellipsis;white-space: nowrap;padding: 5px;overflow: hidden; ">@item.Title</a>
+                              <!-- Price -->
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    }
+
+                }
+         
+          </div>
+        </div>
+      </div>

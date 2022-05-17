@@ -1,0 +1,84 @@
+<style>
+  th,td{
+    white-space: nowrap;
+    padding: 5px;
+  }
+</style>
+<main class="main-content dt-sl mb-3">
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-12 mb-2 px-0" style="margin-top: 60px;">
+@* /////////////////////////////////////////////////////////////////////////////////////////////////////////// *@
+                <fieldset class="m-1 ">
+                    <div class="text-center container">
+                        @{
+                            if (ViewBag.msg == "success")
+                            {
+                                                <div class="table-responsive">
+                                                    
+                                                    <p class="alert alert-success font-weight-bolder" style="margin-top: 40px;">پرداخت با موفقیت انجام شد</p>
+                                                    <table class="table data-list-view">
+                                                      <thead>
+                                                        <tr>
+                                                          <th></th>
+                                                          <th>ردیف</th>
+                                                          <th> عنوان محصول   </th>
+                                                          <th>  کد محصول   </th>
+                                                          <th>قیمت کل (تومان)</th>
+                                                          <th> دانلود فایل</th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                        @if ( ViewBag.factor != null)
+                                                        {
+                                                        
+                                                        int i=1;
+                                                        @foreach (var item in ViewBag.factor)
+                                                        {
+                                                        
+                                                        <tr>
+                                                          <td></td>
+                                                          <td class="product-category"> @i</td>
+                                                          <td class="product-name">@item.product_Name</td>
+                                                          <td class="product-category">@item.Product_Id</td>
+                                                         
+                                                          
+                                                          <td class="product-category" id="@item.Product_Id@item.Product_Id">@item.Total_sum</td>
+                                                          <td class="product-category">
+                                                            <a class="btn btn-primary" href="/profile/download/@item.Product_Id">دانلود</a>
+                                                            
+                                                             </td>
+                                                          @* <script>
+                                                                document.getElementById("@item.Product_Id").innerText=document.getElementById("@item.Product_Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                                                document.getElementById("@item.Product_Id@item.Product_Id").innerText=document.getElementById("@item.Product_Id@item.Product_Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                                            </script> *@
+
+                                                        </tr>
+                                                        i++;
+                                                        }
+
+                                                        }
+
+                                                      </tbody>
+                                                    </table>
+                                                    <p class="alert alert-success font-weight-bolder"><span class="mr-1 ml-1" id="s"> مبلغ کل : @ViewBag.sum  تومان</span> <span class="mr-1 ml-1"> تعداد کالا : @ViewBag.count</span><a class="btn btn-warning mr-5" href="/profile/factor"> بازگشت </a></p>
+                                                          @* <script>
+                                                              document.getElementById("s").innerText=document.getElementById("s").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                                            </script> *@
+                                                    
+                                                </div>
+                            }
+                            if (ViewBag.msg == "error")
+                            {
+                                <p class="alert alert-danger font-weight-bolder"> خطا در پرداخت </p>
+                                <a class="btn btn-danger" href="order/index"> بازگشت </a>
+                            }
+                        }
+                    </div> 
+                </fieldset>
+@* ///////////////////////////////////////////////////////////////////////////////////////////////////////// *@
+            </div>
+        </div>
+    </div>
+</main>
+ 

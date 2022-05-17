@@ -1,0 +1,65 @@
+
+<div class="wrapper" style="margin-top: 40px;">
+
+    <!-- Start main-content -->
+    <main class="main-content  mb-3">
+        <div class="container main-container">
+
+            <div class="row ">
+                <div class="col-12 mb-3 mt-7">
+                    <div class="row text-center">
+
+                        @if (ViewBag.blog!=null)
+                        {
+                            
+                        
+
+                        @foreach (var item in ViewBag.blog)
+                        {
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12  card mt-3">
+                                <div class="post-card">
+                                    <div class="post-thumbnail">
+                                        <a href="/blog/details/@item.Id">
+                                            <img src="~/fileupload/@item.ImageMainBlo" alt="">
+                                        </a>
+                                        <span class="post-tag">@item.TitleBLo</span>
+                                     
+                                    </div>
+                                    <div class="post-title">
+                                        <p  style="text-align: center;">
+                                           @item.TitleBLo
+                                           <br>
+
+                                        <a href="/blog/details/@item.Id" class="btn btn-light form-control">ادامه مطلب </a>
+                                    </p>
+
+
+                                        
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        }
+                        }
+else
+{
+    <p class="alert alert-info text-center">فعلا مطلبی در این مورد توسط مدیر در وبلاگ قرار داده نشده است.</p>
+}
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+          

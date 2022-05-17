@@ -1,0 +1,425 @@
+
+    <!-- PWA Install Alert -->
+    @* <div class="toast pwa-install-alert shadow bg-white" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000" data-bs-autohide="true">
+      <div class="toast-body">
+        <div class="content d-flex align-items-center mb-2"><img src="img/icons/icon-72x72.png" alt="">
+          <h6 class="mb-0"> افزودن به صفحه اصلی </h6>
+          <button class="btn-close ms-auto" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div><span class="mb-0 d-block">سوها را بر روی صفحه اصلی تلفن همراه خود اضافه کنید. <strong class="mx-1"> افزودن به صفحه اصلی  </strong>دکمه &amp;  لذت بردن از آن را مانند یک برنامه منظم.</span>
+      </div>
+    </div> *@
+    <div class="page-content-wrapper">
+      <div class="container">
+        <div class="pt-3">
+          <!-- Hero Slides-->
+          <div class="hero-slides owl-carousel">
+            <!-- Single Hero Slide-->
+
+            @if(ViewBag.slider != null)
+                            {
+                                @foreach (var item in ViewBag.slider)
+                                {
+                                  <div class="single-hero-slide" style="background-image: url('/fileupload/@item.ImageMainSlid')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+                                }
+                            }
+           
+          </div>
+        </div>
+      </div>
+      <!-- Product Catagories -->
+      <div class="product-catagories-wrapper py-3">
+        <div class="container">
+          <h1 class="text-center alert alert-light form-control">
+               دسته بندی ها
+            </h1>
+          <div class="product-catagory-wrap">
+            <div class="row g-2">
+             
+              <div class="col-6">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="home/selectcat">
+                      <span>شرکت های غرفه سازی</span></a></div>
+                </div>
+              </div>
+
+               <div class="col-6">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="home/selectcat">
+                      <span>تامین کنندگان کالا</span></a></div>
+                </div>
+              </div>
+
+               <div class="col-6">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="home/selectcat">
+                      <span>تامین کنندگان منابع انسانی</span></a></div>
+                </div>
+              </div>
+               <div class="col-6">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="home/selectcat">
+                      <span>تامین کنندگان ماشین آلات</span></a></div>
+                </div>
+              </div>
+               <div class="col-6">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="home/selectcat">
+                      <span>تامین کنندگان خدمات</span></a></div>
+                </div>
+              </div>
+               <div class="col-6">
+                <div class="card catagory-card">
+                  <div class="card-body"><a class="text-danger" href="home/selectcat">
+                      <span>فری لنسرها</span></a></div>
+                </div>
+              </div>
+          
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- فروش ویژه Slide -->
+      <div class="flash-sale-wrapper">
+        <div class="container">
+         
+            <h1 class="text-center alert alert-light form-control">
+                محصولات پرفروش
+            </h1>
+           
+          
+          <!-- فروش ویژه Slide-->
+          <div class="flash-sale-slide owl-carousel">
+            <!-- Single Flash Sale Card-->
+
+
+                    @if (ViewBag.product != null)
+                {
+                    @foreach (var item in ViewBag.product)
+                    {
+                      <div class="card flash-sale-card">
+                        <div class="card-body"><a href="home/detailsshop/@item.Id"><img src="/fileupload/@item.ImageMainPro" alt=""><span class="product-title">@item.TitleProductPro</span>
+                            <p class="sale-price" id="@item.Id">@item.Price_Pro تومان </p>
+                               <script>
+                                     document.getElementById("@item.Id").innerText=document.getElementById("@item.Id").innerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                </script>
+                           <a href="home/detailsshop/@item.Id" class="btn btn-primary" style="width: 100%;margin-top: 10px;">سبد خرید</a>
+                            </a>
+                            
+                            </div>
+                      </div>
+                    }
+                }
+
+                             
+          </div>
+        </div>
+      </div>
+      <!-- Top Products -->
+      <div class="top-products-area py-3">
+        <div class="container">
+          <h1 class="text-center alert alert-light form-control">
+آخرین مقالات غرفه سازی           </h1>
+           <div class="collection-slide owl-carousel">
+         
+          @if (ViewBag.magale != null)
+                {
+                    @foreach (var item in ViewBag.magale)
+                    {
+                    <div class="card collection-card"><a href="/blog/details/@item.Id"><img src="/fileupload/@item.ImageMainBlo" alt=""></a>
+                      <div class="collection-title">
+                         
+                                                <a href="/blog/details/@item.Id">
+                                            <img src="/assets/images/icons/article.jpg" alt="لوگوی فروشنده"
+                                                style="width: 30px !important;" />
+                                            </a>
+                                         
+                        <span>@item.TitleBLo</span>
+                        </div>
+                    </div>
+                }
+               }
+        </div>
+        </div>
+      </div>
+      <!-- Cool Facts Area-->
+      <div class="cta-area">
+        <div class="container">
+          <div class="row">
+                                @if(ViewBag.baner != null)
+                            {
+                                @foreach (var item in ViewBag.baner)
+                                {
+
+                                <div class="col-6">
+                                    <div class="category-banner banner banner-fixed br-sm">
+                                        <figure>
+                                            <img src="/fileupload/@item.ImageMainSlid" alt="Category"
+                                                 style="background-color: #605959;" />
+                                        </figure>
+                                       
+                                    </div>
+                                </div>
+                                  }
+
+                                }
+                                
+                            </div>
+        </div>
+      </div>
+     
+      <!-- شرکت های قرفه سازی-->
+      <div class="featured-products-wrapper py-3">
+        <div class="container">
+          <div class="section-heading d-flex align-items-center justify-content-between">
+            <h1 class="text-center alert alert-light form-control">برترین شرکت های غرفه سازی</h1>
+          </div>
+          <div class="row g-3">
+            <!-- Featured Product Card-->
+
+             @if (ViewBag.ghorfe != null)
+                {
+                    @foreach (var item in ViewBag.ghorfe)
+                    {
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card featured-product-card">
+                          <div class="" style="min-height: 170px;">
+                            <!-- Badge--><span class="badge badge-warning custom-badge"><i class="lni lni-star"></i></span>
+                            <div class="product-thumbnail-side">
+                              <!-- Wishlist Button -->
+                              <!-- Thumbnail --><a class="product-thumbnail d-block" href="home/details/@item.Id"><img src="/fileupload/@item.MainImage" alt="" ></a>
+                            </div>
+                            <div class="product-description">
+                              <!-- Product Title --><a class="product-title d-block" href="home/details/@item.Id" style="text-overflow: ellipsis;white-space: nowrap;padding: 5px;overflow: hidden; ">@item.Title</a>
+                              <!-- Price -->
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    }
+
+                }
+         
+          </div>
+        </div>
+      </div>
+
+      @* تامین کنندگان کالا  *@
+       <div class="top-products-area py-3">
+        <div class="container">
+          <h1 class="text-center alert alert-light form-control">
+تامین کنندگان کالاهای غرفه سازی           </h1>
+           <div class="collection-slide owl-carousel">
+         
+          @if (ViewBag.kala != null)
+                {
+                    @foreach (var item in ViewBag.kala)
+                    {
+                    <div class="card collection-card"><a href="home/details/@item.Id"><img src="/fileupload/@item.MainImage" alt=""></a>
+                      <div class="collection-title">
+                         
+                                               @if ( ViewBag.user != null)
+                                    {
+                                        @foreach (var item1 in ViewBag.user)
+                                        {
+                                            @if (item.UserId== item1.PhoneUs)
+                                            {
+                                                <a href="home/details/@item.Id">
+                                            <img src="/fileupload/@item1.ProfileImageUs" alt="لوگوی فروشنده"
+                                               style="width: 30px;" />
+                                            </a>
+                                            }
+                                            
+                                        }
+                                        
+                                        
+                                    }
+                                         
+                        <span>@item.Title</span>
+                        </div>
+                    </div>
+                }
+               }
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      @* پایان تامین کنندگان کالا *@
+
+      @* تامین کنندگان خدمات  *@
+       <div class="top-products-area py-3">
+        <div class="container">
+          <h1 class="text-center alert alert-light form-control">
+تامین کنندگان خدمات غرفه سازی           </h1>
+           <div class="collection-slide owl-carousel">
+         
+          @if (ViewBag.khadamat != null)
+                {
+                    @foreach (var item in ViewBag.khadamat)
+                    {
+                    <div class="card collection-card"><a href="home/details/@item.Id"><img src="/fileupload/@item.MainImage" alt="" style="min-height: 100px;"></a>
+                      <div class="collection-title">
+                         
+                                               @if ( ViewBag.user != null)
+                                    {
+                                        @foreach (var item1 in ViewBag.user)
+                                        {
+                                            @if (item.UserId== item1.PhoneUs)
+                                            {
+                                                <a href="home/details/@item.Id">
+                                            <img src="/fileupload/@item1.ProfileImageUs" alt="لوگوی فروشنده"
+                                               style="width: 30px;" />
+                                            </a>
+                                            }
+                                            
+                                        }
+                                        
+                                        
+                                    }
+                                         
+                        <span>@item.Title</span>
+                        </div>
+                    </div>
+                }
+               }
+        </div>
+        </div>
+      </div>
+
+      @* پایان تامین کنندگان خدمات *@
+
+
+       @* تامین کنندگان منابع انسانی  *@
+       <div class="top-products-area py-3">
+        <div class="container">
+          <h1 class="text-center alert alert-light form-control">
+تامین کنندگان منابع انسانی             </h1>
+           <div class="collection-slide owl-carousel">
+         
+          @if (ViewBag.ensan != null)
+                {
+                    @foreach (var item in ViewBag.ensan)
+                    {
+                    <div class="card collection-card"><a href="home/details/@item.Id"><img src="/fileupload/@item.MainImage" alt="" style="min-height: 100px;"></a>
+                      <div class="collection-title">
+                         
+                                               @if ( ViewBag.user != null)
+                                    {
+                                        @foreach (var item1 in ViewBag.user)
+                                        {
+                                            @if (item.UserId== item1.PhoneUs)
+                                            {
+                                                <a href="home/details/@item.Id">
+                                            <img src="/fileupload/@item1.ProfileImageUs" alt="لوگوی فروشنده"
+                                               style="width: 30px;" />
+                                            </a>
+                                            }
+                                            
+                                        }
+                                        
+                                        
+                                    }
+                                         
+                        <span>@item.Title</span>
+                        </div>
+                    </div>
+                }
+               }
+        </div>
+        </div>
+      </div>
+
+      @* پایان تامین کنندگان منابع انسانی *@
+
+
+       <!-- ماشین آلات اداری-->
+      <div class="featured-products-wrapper py-3">
+        <div class="container">
+          <div class="section-heading d-flex align-items-center justify-content-between">
+            <h1 class="text-center alert alert-light form-control">برترین تامین کنندگان ماشین آلات </h1>
+          </div>
+          <div class="row g-3">
+            <!-- Featured Product Card-->
+
+             @if (ViewBag.mashin != null)
+                {
+                    @foreach (var item in ViewBag.mashin)
+                    {
+                      <div class="col-6 col-md-4 col-lg-3" >
+                        <div class="card featured-product-card">
+                          <div class="" style="min-height: 170px;">
+                            <!-- Badge--><span class="badge badge-warning custom-badge"><i class="lni lni-star"></i></span>
+                            <div class="product-thumbnail-side">
+                              <!-- Wishlist Button -->
+                              <!-- Thumbnail --><a class="product-thumbnail d-block" href="home/details/@item.Id"><img src="/fileupload/@item.MainImage" alt="" style="border-radius: 15px;"></a>
+                            </div>
+                            <div class="product-description">
+                              <!-- Product Title --><a class="product-title d-block" href="home/details/@item.Id" style="text-overflow: ellipsis;white-space: nowrap;padding: 5px;overflow: hidden; ">@item.Title</a>
+                              <!-- Price -->
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    }
+
+                }
+         
+          </div>
+        </div>
+      </div>
+
+      @* فری لنسرها  *@
+       <div class="top-products-area py-3">
+        <div class="container">
+          <h1 class="text-center alert alert-light form-control">
+برترین فری لنسرها             </h1>
+           <div class="collection-slide owl-carousel">
+         
+          @if (ViewBag.free != null)
+                {
+                    @foreach (var item in ViewBag.free)
+                    {
+                    <div class="card collection-card"><a href="home/details/@item.Id"><img src="/fileupload/@item.MainImage" alt="" style="min-height: 100px;max-height: 100px;"></a>
+                      <div class="collection-title">
+                         
+                                               @if ( ViewBag.user != null)
+                                    {
+                                        @foreach (var item1 in ViewBag.user)
+                                        {
+                                            @if (item.UserId== item1.PhoneUs)
+                                            {
+                                                <a href="home/details/@item.Id">
+                                            <img src="/fileupload/@item1.ProfileImageUs" alt="لوگوی فروشنده"
+                                               style="width: 30px;" />
+                                            </a>
+                                            }
+                                            
+                                        }
+                                        
+                                        
+                                    }
+                                         
+                        <span>@item.Title</span>
+                        </div>
+                    </div>
+                }
+               }
+        </div>
+        </div>
+      </div>
+
+      @* پایان تامین کنندگان منابع انسانی *@

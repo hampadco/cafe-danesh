@@ -1,0 +1,192 @@
+@model ViewModel.AdminViewModel.Page.MPages
+
+
+
+
+<div class="container card" style="margin-top: 40px;">
+   
+       <div class="pt-3">
+
+           
+                <p class="product-title text-center form-control">@Model.Title</p>
+                
+               
+
+
+
+
+          <!-- Hero Slides-->
+          <div class="hero-slides owl-carousel">
+            <!-- Single Hero Slide-->
+
+           
+                                  <div class="single-hero-slide" style="background-image: url('/fileupload/@Model.MainImage')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+
+
+                                   <div class="single-hero-slide" style="background-image: url('/fileupload/@Model.Image1')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+
+                                   <div class="single-hero-slide" style="background-image: url('/fileupload/@Model.Image2')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+
+                                   <div class="single-hero-slide" style="background-image: url('/fileupload/@Model.Image3')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+                                   <div class="single-hero-slide" style="background-image: url('/fileupload/@Model.Image4')">
+                                    <div class="slide-content h-100 d-flex align-items-center">
+                                      <div class="slide-text">
+                                        @* <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">آمازون اکو</h4>
+                                        <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">نسل سوم, زغال چوبی</p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">خرید</a>
+                                      *@</div> 
+                                    </div>
+                                  </div>
+
+
+
+                              
+           
+          </div>
+        </div>
+
+
+    <div class="product product-single row">
+        
+        <div class="col-md-6 mb-4 mb-md-6">
+           
+            <div class="product-details">
+                 <img src="/fileupload/@ViewBag.qus.ProfileImageUs" alt="" style="width: 50px;" ><b style="font-size: 14px;">@ViewBag.qus.Shoar</b>
+               
+                </div>
+                <div class="ratings-container">
+                    <div class="ratings-full">
+                        <span class="ratings" style="width: 80%;"></span>
+                        <span class="tooltiptext tooltip-top"></span>
+                    </div>
+                    @* <a href="#" class="rating-reviews">(1 نظر )</a> *@
+                </div>
+                <hr class="product-divider">
+
+                <div class="">
+                    <h5>توضیحات و حوزه فعالیت </h5>
+                </div>
+                <p style="text-align: justify ;"> @Model.description</p>
+
+            
+
+           
+                <div class="row">
+
+                    <div class="col-6">
+                       
+                         <h5 class="new-price">قبول پروژه در شهر های   : </h5>
+                   
+                          <p>@Model.Citys</p>
+                    </div>
+                    
+
+                
+
+                    
+          
+               @if (@Model.TypeSend != null)
+                {
+                     
+                     <div class="col-6">
+                        <h5 class="new-price">نحوه ارسال محصول: </h5>
+                   
+                           <p>@Model.TypeSend</p>
+                    </div>
+
+                    
+                     <div class="col-6">
+                        <h5 class="new-price">نحوه تصفیه حساب(نقد یا چک و شرایط): </h5>
+                   
+                          <p>@Model.TypePay</p>
+                    </div>
+
+                    <div class="col-6">
+                        <h5 class="new-price">محل تسویه حساب: </h5>
+                   
+                           <p>@Model.LocationPay</p>
+                    </div>
+
+                 }
+ 
+</div>
+                    
+
+                   
+
+               
+
+
+
+
+
+                <hr class="product-divider">
+
+                <div class="">
+                    <h5 class="new-price">اطلاعات ارتباطی</h5>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-6">
+                       
+                         <h5 class="new-price">شماره تلفن ثابت : </h5>
+                   
+                           <p>@ViewBag.qus.Tel</p>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="new-price">شماره تلفن  همراه: </h5>
+                   
+                           <p>@ViewBag.qus.PhoneUs</p>
+                    </div>
+
+                </div>
+
+                 <div class="row">
+
+                    <div class="col-6">
+                       
+                         <h5 class="new-price">آدرس  : </h5>
+                   
+                           <p>@ViewBag.qus.AddressUs</p>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="new-price">آدرس سایت: </h5>
+                   
+                           <p>@ViewBag.qus.Website</p>
+                    </div>
+
+                </div>
+
+     
+
+    </div>
+
+</div>
